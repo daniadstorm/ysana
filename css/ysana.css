@@ -1,0 +1,85 @@
+/*globales --------------------------------------------------------------------*/
+:root{
+    --ysana-color-1: #ea0029;
+    --ysana-color-2: #00abc8;
+    --ysana-color-3: #97bf0d;
+    --ysana-color-4: #93117e;
+    --ysana-color-5: #f39400;
+    --ysana-color-6: #000f5a;
+    --ysana-color-7: #e6007e;    
+    --ysana-color-8: #F23F00;    
+}
+html, body { margin:0;padding:0; }
+body { background-color:#f2f2f2; font-family: 'Roboto' }
+/*globales --------------------------------------------------------------------*/
+
+/*correcciones bootstrap ------------------------------------------------------*/
+.cb-ajustado [class*="col-"] { padding:0;margin:0; }
+/*correcciones-----------------------------------------------------------------*/
+/*Ampliacion bootstrap -------------------------------------------------------*/
+
+/*Ampliacion bootstrap -------------------------------------------------------*/
+
+/*Ysana ----------------------------------------------------------------------*/
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--ysana-color-6);
+    font-weight: bold;
+}
+.text-color-1{
+    color: var(--ysana-color-1);
+}
+.text-color-3{
+    color: var(--ysana-color-3);
+}
+.text-color-7{
+    color: var(--ysana-color-7);
+}
+.bg-transparent{
+    background-color: transparent;
+}
+.btn-color-5{
+    background-color: #f39400;
+}
+.btn-color-8{
+    background-color: var(--ysana-color-8);
+}
+.bg-blue-ysana{
+    background-color: var(--ysana-color-2);
+}
+.bg-grayopacity-ysana{
+    background-color: rgba(0, 0, 0, 0.06);
+}
+.o-50{
+    opacity: 0.5;
+}
+.img-start-puntuacion-16{
+    max-width: 16px;
+}
+.img-start-puntuacion-20{
+    max-width: 20px;
+}
+.img-start-puntuacion-38{
+    max-width: 38px;
+}
+div.info p{
+    margin-bottom: 0;
+}
+div.valoracion:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.06);
+}
+nav#nav-info div.nav a.nav-link{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: var(--ysana-color-6);
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0px;
+}
+nav#nav-info div.nav a.nav-link.active{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: var(--ysana-color-6);
+    border-bottom: 4px solid var(--ysana-color-2);
+}
+/*Ysana ----------------------------------------------------------------------*/
