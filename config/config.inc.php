@@ -44,7 +44,8 @@ if(!isset($_SESSION)) session_start();
 //castellano asignado por defecto doblemente
 //lang = el nombre del lenguaje
 //lng = array de textos
-if (isset($_POST['idioma_seleccionado'])) $_SESSION['lang'] = $_POST['idioma_seleccionado'];
+/* if (isset($_POST['idioma_seleccionado'])) $_SESSION['lang'] = $_POST['idioma_seleccionado']; */
+if (isset($_REQUEST['idioma_seleccionado'])) $_SESSION['lang'] = $_REQUEST['idioma_seleccionado'];
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'cast';
 switch ($lang) {
     default:

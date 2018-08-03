@@ -4,7 +4,7 @@
 
 class Model {
     private $host_bd = 'localhost';
-    private $name_bd = 'adst_ysana';
+    private $name_bd = 'adst_ysana_lang';
     private $user_bd = 'root';
     private $pass_bd = '';
     public $pre = 'adst_ysana_';

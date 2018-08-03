@@ -52,7 +52,7 @@ class articulosModel extends Model {
             else return false;
     }
 
-    function get_articulo($id_articulo) {
+    /* function get_articulo($id_articulo) {
         $q = ' SELECT * FROM '.$this->pre.'articulos a';
         $q .= ' INNER JOIN '.$this->pre.'categorias_articulo as ca';
         $q .= ' INNER JOIN '.$this->pre.'categorias as c';
@@ -67,23 +67,56 @@ class articulosModel extends Model {
         $q .=   ' WHERE spa.id_articulo='.$id_articulo.')';
         $q .=   ' AND a.visible = 1';
         return $this->execute_query($q);
-    }
+    } */
 
-    function get_usos_articulo($id_articulo) {
-        $q = ' SELECT * FROM '.$this->pre.'uso_articulo as ua';
-        $q .= ' WHERE ua.id_articulo = ' . $id_articulo . ' ';
+    function get_articulo($id_articulo, $lang) {
+        $q = ' SELECT * FROM '.$this->pre.'articulos a';
+        $q .= ' INNER JOIN '.$this->pre.'articulos_lang as al';
+        $q .= ' INNER JOIN '.$this->pre.'lang as l';
+        $q .= ' INNER JOIN '.$this->pre.'categorias_articulo as ca';
+        $q .= ' INNER JOIN '.$this->pre.'categorias as c';
+        $q .= ' INNER JOIN '.$this->pre.'precio_articulo as pa';
+        $q .= ' on a.id_articulo=al.id_articulo';
+        $q .= ' and l.id_lang=al.id_lang';
+        $q .= ' and ca.id_categoria=c.id_categoria';
+        $q .= ' and pa.id_articulo=a.id_articulo';
+        $q .= ' WHERE a.id_articulo='.$id_articulo;
+        $q .= ' and pa.fecha=(SELECT max(spa.fecha) FROM '.$this->pre.'precio_articulo as spa WHERE spa.id_articulo='.$id_articulo.')';
+        $q .= ' and a.visible=1';
+        $q .= ' and l.code="'.$lang.'"';
         return $this->execute_query($q);
     }
 
-    function get_infonutricional_articulo($id_articulo) {
+    function get_usos_articulo($id_articulo, $lang) {
+        $q = ' SELECT * FROM '.$this->pre.'uso_articulo as ua';
+        $q .= ' INNER JOIN '.$this->pre.'lang as l';
+        $q .= ' on ua.lang=l.id_lang';
+        $q .= ' WHERE ua.id_articulo = ' . $id_articulo;
+        $q .= ' and l.code="'.$lang.'"';
+        return $this->execute_query($q);
+    }
+
+    function get_infonutricional_articulo($id_articulo, $lang) {
         $q = ' SELECT * FROM '.$this->pre.'informacion_articulo as ia';
+        $q .= ' INNER JOIN '.$this->pre.'lang as l';
+        $q .= ' on ia.lang=l.id_lang';
+        $q .= ' WHERE ia.id_articulo = ' . $id_articulo . ' ';
+        $q .= ' and l.code="'.$lang.'"';
+        return $this->execute_query($q);
+    }
+
+    function get_imgs_articulo($id_articulo) {
+        $q = ' SELECT * FROM '.$this->pre.'imgs_articulo as ia';
         $q .= ' WHERE ia.id_articulo = ' . $id_articulo . ' ';
         return $this->execute_query($q);
     }
 
-    function get_consejo_articulo($id_articulo) {
+    function get_consejo_articulo($id_articulo, $lang) {
         $q = ' SELECT * FROM '.$this->pre.'consejo_articulo as ca';
+        $q .= ' INNER JOIN '.$this->pre.'lang as l';
+        $q .= ' on ca.lang=l.id_lang';
         $q .= ' WHERE ca.id_articulo = ' . $id_articulo . ' ';
+        $q .= ' and l.code="'.$lang.'"';
         return $this->execute_query($q);
     }
 
@@ -103,6 +136,12 @@ class articulosModel extends Model {
         if ($r) {
             return $r->num_rows;
         } else return false;
+    }
+
+    function get_stock_articulo($id_articulo) {
+        $q = ' SELECT * FROM '.$this->pre.'articulos as a';
+        $q .= ' WHERE a.id_articulo = '.$id_articulo.' ';
+        return $this->execute_query($q);
     }
 
     function get_total_valoraciones($id_articulo) {
