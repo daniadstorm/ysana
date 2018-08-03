@@ -98,7 +98,7 @@ if($id_articulo!=''){
     $rgtv = $aM->get_total_valoraciones($id_articulo);
     if($rgtv){
         while($fgtv = $rgtv->fetch_assoc()){
-            $total_stock = $fgtv['total'];
+            $total_valoracion_producto = $fgtv['total'];
         }
     }
 }
