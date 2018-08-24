@@ -5,10 +5,10 @@
 $host  = $_SERVER['HTTP_HOST'];
 $uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $base = "http://" . $host . $uri . "/";
-$ruta_inicio = 'http://localhost/ysana/';
-$ruta_archivos = 'http://localhost/ysana/';
-//$ruta_inicio = 'http://192.168.153.10/ysana/';
-//$ruta_archivos = 'http://192.168.153.10/ysana/';
+/* $ruta_inicio = 'http://localhost/ysana/';
+$ruta_archivos = 'http://localhost/ysana/'; */
+$ruta_inicio = 'http://192.168.153.23/ysana/';
+$ruta_archivos = 'http://192.168.153.23/ysana/';
 //$ruta_inicio = 'https://steampunkseo.es/ysana/';
 //$ruta_archivos = 'https://steampunkseo.es/ysana/';
 $document_root = $_SERVER['DOCUMENT_ROOT'].'/ysana/';

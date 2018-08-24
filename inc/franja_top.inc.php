@@ -47,6 +47,12 @@ if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= USER)
       <label class="ml-1 mr-1 text-light">|</label>
       <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Crear cuenta</a>
       <?php } ?>
+      <a href="<?php echo $ruta_inicio; ?>experiencia/carrito.php">
+      <div class="carrito-img p-2 mx-3">
+        <img src="https://png.icons8.com/material-rounded/38/FFFFFF/shopping-cart.png" class="">
+        <label class="num">2</label>
+      </div>
+      </a>
     </div>
     <div class="navbar-collapse collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">

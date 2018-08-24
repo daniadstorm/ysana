@@ -10,7 +10,7 @@
     --ysana-color-8: #F23F00;    
 }
 html, body { margin:0;padding:0; }
-body { background-color:#f2f2f2; font-family: 'Roboto' }
+body { /* background-color:#f2f2f2; */ font-family: 'Roboto' }
 /*globales --------------------------------------------------------------------*/
 
 /*correcciones bootstrap ------------------------------------------------------*/
@@ -39,10 +39,18 @@ h1,h2,h3,h4,h5,h6{
     background-color: transparent;
 }
 .btn-color-5{
+    border-color: #f39400;
     background-color: #f39400;
 }
 .btn-color-8{
     background-color: var(--ysana-color-8);
+}
+.btn-cesta{
+    background-color: transparent;
+    border: 2px solid #000;
+}
+.btn-lg{
+    border-radius: 2px;
 }
 .bg-blue-ysana{
     background-color: var(--ysana-color-2);
@@ -55,6 +63,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .img-start-puntuacion-16{
     max-width: 16px;
+    max-height: 16px;
 }
 .img-start-puntuacion-20{
     max-width: 20px;
@@ -82,4 +91,588 @@ nav#nav-info div.nav a.nav-link.active{
     color: var(--ysana-color-6);
     border-bottom: 4px solid var(--ysana-color-2);
 }
+ol.breadcrumb{
+    margin-bottom: 0px;
+}
+ol.breadcrumb li a{
+    color: #000;
+}
+.texto-familia {
+    background-color: #000;
+    color: #fff;
+    padding: .3rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    width: 100%;
+    text-align: center;
+}
+div.familias ul li{
+    border-radius: 1px;
+}
+div.familias ul li a{
+    color: #fff;
+    background-color: #000;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.tarjeta-articulo{
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 4px 4px 4px -1px #d4d4d4;
+    /* max-width: 170px; */
+}
+.tarjeta-articulo .tarjeta-articulo_elementos-basicos{
+    position: relative;
+    background-color: #fff;
+    transition: border .15s ease-out 0s;
+}
+.tarjeta-articulo_foto{
+    position: relative;
+    padding: 0.5rem;
+}
+div.tarjeta-articulo_adicional{
+    /* padding-bottom: 0.5rem; */
+    padding: 0.5rem;
+    justify-content: center;
+}
+header.tarjeta-articulo_info {
+    padding: 0 0.5rem;
+}
+header.tarjeta-articulo_info h3 {
+    /* font-size: 14px; */
+    font-size: 1.3rem;
+    margin: 0px;
+}
+header.tarjeta-articulo_info h3.categoria{
+    color: var(--ysana-color-3);
+    font-weight: normal;
+}
+header.tarjeta-articulo_info h3.precio{
+    font-weight: normal;
+}
+header.tarjeta-articulo_extras {
+    padding: 0 0.5rem;
+    width: 100%;
+}
+header.tarjeta-articulo_extras img.img-start{
+    max-width: 18px;
+    max-height: 18px;
+}
+/* div.tarjeta-articulo_foto img{
+    max-width: 170px;
+} */
+div.article-block{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem; */
+}
+header.tarjeta-articulo_extras div.boton {
+    padding-top: 0.5rem;
+}
+div.articulos{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+button.btn.btn-comprar.btn-sm {
+    width: 100%;
+}
+.btn-comprar{
+    color: #000;
+    font-size: 1em;
+    background-color: var(--ysana-color-5);
+    border-color: var(--ysana-color-5);
+}
+.familias{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+div.footer2{
+    background-color: var(--ysana-color-2);
+    min-height: 96px;
+}
+.img-footer2{
+    max-width: 64px;
+    max-height: 64px;
+}
+.footer h3{
+    font-size: 1rem;
+    color: #fff;
+}
+.footer{
+    background-color: var(--ysana-color-6);
+    padding: 1.5rem;
+}
+.footer2{
+    padding: 1rem;
+}
+.footer ol{
+    list-style: none;
+    padding-left: 20px;
+}
+.footer ol li{
+    list-style: none;
+}
+.footer ol li a{
+    color: #fff;
+    text-decoration: none;
+}
+.vl {
+    width: 2px;
+    background-color: white;
+    height: auto;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    content: "";
+}
+#panelTop{
+    background-color: var(--ysana-color-6);
+    padding: .25rem;
+}
+#panelTop a{
+    color: #fff;
+}
+#frmbuscar{
+    position: relative;
+}
+#frmbuscar input{
+    padding-left: 40px;
+    border: 0px;
+    position: relative;
+    border-radius: 24px;
+}
+#frmbuscar img{
+    position: absolute;
+    max-width: 24px;
+    left: 8px;
+}
+#frmbuscar input:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0);
+    border-color: transparent;
+}
+#frmbuscar input::placeholder{
+    color: #000;
+}
+#navbar_inicio{
+    background-color: #F2F2F2;
+}
+#nav_inicio li a{
+    color: var(--ysana-color-6);
+    font-weight: bold;
+}
+div.info div.contenido{
+    max-width: 600px;
+    padding: 1.5rem;
+    text-align: center;
+    /* box-shadow: 4px 4px 6px -4px #000; */
+    box-shadow: 0px 0px 6px -1px #000;
+    position: relative;
+}
+div.info div.contenido p{
+    z-index: 20;
+}
+.separadorqs{
+    height: 13vh;
+}
+.clubysana{
+    height: 50vh;
+    background-color: #e6007e;
+}
+.clubysana .info{
+    height: 100%;
+}
+
+div.adelgaysana{
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background-color: #00ACC8;
+}
+div.freenose{
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background-color: #39B54A;
+}
+div.freenose div.img{
+    position: relative;
+    height: 100%;
+    background-image: url('https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.adelgaysana div.img{
+    position: relative;
+    height: 100%;
+    background-image: url('https://images.vexels.com/media/users/3/146850/isolated/preview/b314541f49ce483dd4c47d0142a47f77-icono-de-pelota-de-ftbol-cl-sico-by-vexels.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.info h1{
+    font-size: 16px;
+}
+div.adelgaysana div.info {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: -20%;
+    width: auto;
+    max-width: 270px;
+    background-color: white;
+    height: 180px;
+    padding: 1rem;
+    box-shadow: 3px 2px 13px -3px;
+}
+div.freenose div.info {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: -20%;
+    width: auto;
+    max-width: 270px;
+    background-color: white;
+    height: 180px;
+    padding: 1rem;
+    box-shadow: 3px 2px 13px -3px;
+}
+.contacto h1 {
+    font-size: 4rem;
+}
+.frmcontacto{
+    padding: 5rem;
+    max-width: 840px;
+    background-color: var(--ysana-color-2);
+}
+div.contacto div.titulo{
+    left: 0;
+}
+.border-frm-contact{
+    border-radius: 20px;
+}
+.liniacategoria{
+    border-bottom: 3px solid var(--ysana-color-2);
+    width: 14em;
+}
+.card-header{
+    background-color: rgba(230, 230, 230, 0.4);
+    border-bottom: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: ease-in-out .5s;
+}
+.card{
+    margin-bottom: .4rem;
+    border: 1px solid rgba(0,0,0,0);
+}
+.card-header p{
+    max-width: 400px;
+}
+div.card-header img.img-categ{
+    position: absolute;
+    right: 0em;
+    top: 0;
+}
+
+div.categoria div[aria-expanded="true"]{
+    background-color: #8BC53F;
+    transition: ease-out 1s;
+}
+div.categoria div.collapse{
+    background-color: rgba(230, 230, 230, 1);
+    transition: ease-out .5s;
+}
+div.producto div.img{
+    background-color: #fff;
+    transition: ease-out .1s;
+    
+}
+div.contenedor-productos div.producto{
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+div.contenedor-productos div.img:hover{
+    box-shadow: 0px -5px 13px -2px #a0a0a0;
+    transition: ease-in-out .2s;
+}
+div.producto div.footer-prod{
+    text-align: center;
+    padding: .5rem;
+    background-color: var(--ysana-color-6);
+}
+div.producto div.footer-prod h5{
+    color: #fff;
+}
+#mapaFarmacia{
+    background-color: var(--ysana-color-5);
+}
+/* div.farmacias{
+    background-color: var(--ysana-color-5);
+} */
+div.farmacias div.lista{
+    max-height: 200px;
+    min-height: 50px;
+    overflow-y: scroll;
+    min-width: 200px;
+}
+.lista .farmacia{
+    padding: 0.5rem;
+}
+div.infoxs {
+    background-color: #ffffffcf;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+    margin: .5rem;
+}
+div.infoxs h1 {
+    font-size: 18px;
+}
+div.infoxs p {
+    font-size: 16px;
+}
+.img-ysanaclub{
+    max-height: 200px;
+}
+.foto-carrito{
+    max-width: 87px;
+}
+.carrito{
+    background-color: #fff;
+}
+.bg-carrito{
+    background-color: #ebeced;
+}
+.ticket-pago{
+    background: url(//cdn.pccomponentes.com/img/fondos/bg-ticket-pago.png) bottom repeat-x;
+    border-top: 10px solid #00abc8;
+    clear: both;
+    color: #444;
+    margin-bottom: 1rem;
+    padding-bottom: 5px;
+}
+.ticket-pago_desglose{
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    clear: both;
+    font-size: .9rem;
+    padding: 1rem .75rem;
+}
+.ticket-pago_articulos{
+    margin-bottom: .6rem;
+    padding-bottom: .6rem;
+}
+.ticket-pago_total{
+    border-top: 1px solid #ccc;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    padding-top: .5rem;
+}
+.pull-xs-right {
+    float: right!important;
+}
+.btn-unidades{
+    color: #444;
+    background-color: #fff;
+    border-color: #d2d2d2;
+}
+.btn-mini{
+    padding: 0px 6px;
+}
+.tabla-carrito td{
+    vertical-align: middle;
+}
+.tabla-carrito tbody{
+    border-bottom: 4px solid #c3c3c3;
+}
+.qtt-menos{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+}
+.qtt-mas{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px;
+}
+.qtt-input{
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #e2e2e2;
+    border-radius: 0;
+    height: 25px;
+    line-height: 16px;
+    padding: 0;
+    width: 30px;
+}
+.carrito-img{
+    position: relative;
+}
+.carrito-img .num{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid #00abc8;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1rem;
+    width: 22px;
+    height: 24px;
+    color: #00abc8;
+    font-weight: bold;
+}
+#quiensomos{
+    /* overflow: hidden; */
+    position: relative;
+}
+#quiensomos div.titulo{
+    z-index: 10;
+}
+#quiensomos div.info{
+    z-index: 10;
+}
+#quiensomos img[class*="img-"]{
+    position: absolute;
+}
+#quiensomos .img-hoja1{
+    left: 0;
+    bottom: 0;
+    width: 38%;
+}
+#quiensomos .img-botella{
+    max-width: 150px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#quiensomos .img-botella2{
+    max-width: 150px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+#quiensomos .img-botella3 {
+    max-width: 200px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -9em;
+}
+#quiensomos .img-hoja2 {
+    max-width: 200px;
+    top: -13em;
+    bottom: 0;
+    margin: auto;
+    right: -2em;
+}
+#quiensomos .img-fruta{
+    left: -3.5em;
+    max-width: 200px;
+    bottom: -3em;
+}
+.contquiensomos{
+    overflow: hidden;
+}
 /*Ysana ----------------------------------------------------------------------*/
+
+/* [class^='col-']{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} */
+@media (max-width: 575.98px) {
+    .frmcontacto{
+        padding: 2rem;
+    }
+    .h1-mbl{
+        font-size: 1.5rem;
+    }
+    div.card-header img.img-categ {
+        position: absolute;
+        right: 0em;
+        bottom: 0em;
+        max-width: 50px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #quiensomos .img-hoja1 {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-inner{
+        height: 400px;
+    }
+    .nav-link{
+        padding: .25rem 1rem;
+    }
+    #quiensomos .img-hoja1 {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel-inner{
+        height: 400px;
+    }
+    #quiensomos .img-hoja1 {
+        width: 46%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-inner{
+        height: 400px;
+    }
+}
+
+/* @media (max-width: 576px) { 
+    .frmcontacto{
+        padding: 2rem;
+    }
+    .h1-mbl{
+        font-size: 1.5rem;
+    }
+    div.card-header img.img-categ {
+        position: absolute;
+        right: 0em;
+        bottom: 0em;
+        max-width: 50px;
+    }
+}
+
+@media (min-width: 768px){
+    .carousel-inner{
+        height: 400px;
+    }
+    .nav-link{
+        padding: .25rem 1rem;
+    }
+}
+
+@media (min-width: 992px){ 
+    
+ }
+
+@media (min-width: 1200px) { 
+
+ } */

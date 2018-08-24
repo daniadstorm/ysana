@@ -14,7 +14,7 @@ class inputsModel extends Model {
     <input pattern=".{0}|.{5,10}" required title="Either 0 OR (5 to 10 chars)">
     <input pattern=".{0}|.{8,}"   required title="Either 0 OR (8 chars minimum)">
     */
-    function get_input_text($id, $val, $class='', $lbl='', $placeholder='', $err_desc='', $min_length=false, $max_length=false, $allow_empty=false) {
+    function get_input_text($id, $val, $class='', $lbl='', $placeholder='', $err_desc='', $min_length=false, $max_length=false, $allow_empty=false, $classdiv='form-group') {
         $val = $this->safe_show($val);
         
         $aux_required = 'required';
@@ -30,7 +30,7 @@ class inputsModel extends Model {
         if ($max_length != false) $aux_pattern .= $max_length;
         $aux_pattern .= '}';
         
-        $o  = '<div class="form-group">';
+        $o  = '<div class="'.$classdiv.'">';
         if (strlen($lbl) > 0) $o .= '<label>'.$lbl.'</label>';
         $o .=   '<input type="text" '.$aux_required.' id="'.$id.'" name="'.$id.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" title="'.$err_desc.'">';
         $o .= '</div>';
