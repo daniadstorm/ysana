@@ -1,5 +1,5 @@
 <?php
-$title = 'SESNINES';
+$title = 'Ysana';
 $meta_lang = $lang; //hacer switch con traduccion si necesario (o array)
 $meta_desc = '';
 $meta_kw = '';

@@ -300,14 +300,15 @@ div.freenose{
 div.freenose div.img{
     position: relative;
     height: 100%;
-    background-image: url('https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png');
+    background-image: url('../img/home/10.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position-x: 2em;
 }
 div.adelgaysana div.img{
     position: relative;
     height: 100%;
-    background-image: url('https://images.vexels.com/media/users/3/146850/isolated/preview/b314541f49ce483dd4c47d0142a47f77-icono-de-pelota-de-ftbol-cl-sico-by-vexels.png');
+    background-image: url('../img/home/9.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

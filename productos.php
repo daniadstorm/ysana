@@ -50,14 +50,14 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         <h5 class="mb-0">
                             <h1>Nutrición</h1>
                         </h5>
-                        <img class="img-categ" src="https://vignette.wikia.nocookie.net/futbol/images/9/90/Copa_Mundial_de_F%C3%BAtbol.png/revision/latest?cb=20140617232719">
+                        <img class="img-categ" src="img/home/7.png">
 
                     </div>
                     <div id="acordeon_nutricion" class="collapse" aria-labelledby="acor_head1" data-parent="#accordion">
                         <div class="card-body">
                             <div class="contenedor-productos mt-3">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-4 col-lg-3">
                                         <a href="<?php echo $ruta_inicio; ?>ficha-producto.php?id_producto=1">
                                             <div class="producto">
                                                 <div class="img">
@@ -69,7 +69,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4 col-lg-3">
                                         <div class="producto">
                                             <div class="img">
                                                 <img class="img-categ img-fluid" src="https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png">
@@ -79,7 +79,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4 col-lg-3">
                                         <div class="producto">
                                             <div class="img">
                                                 <img class="img-categ img-fluid" src="https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png">
@@ -89,7 +89,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4 col-lg-3">
                                         <div class="producto">
                                             <div class="img">
                                                 <img class="img-categ img-fluid" src="https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png">
@@ -99,7 +99,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4 col-lg-3">
                                         <div class="producto">
                                             <div class="img">
                                                 <img class="img-categ img-fluid" src="https://images.vexels.com/media/users/3/127125/isolated/preview/5f33b9a2460731d6b3efd7ed80e5f9a7-icono-de-pelota-de-playa-by-vexels.png">
