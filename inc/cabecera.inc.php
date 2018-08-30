@@ -16,7 +16,8 @@ $meta_kw = '';
 <meta name="keywords" content="<?php echo $meta_kw; ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
 <link rel="shortcut icon" href="<?php echo $ruta_archivos; ?>img/favicon/favicon.ico" />
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>

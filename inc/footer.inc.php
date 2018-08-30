@@ -57,7 +57,7 @@
                             <a href="#">Política de cookies</a>
                         </li>
                         <li>
-                            <a href="#">Política de vena</a>
+                            <a href="#">Política de ventas</a>
                         </li>
                     </ol>
                 </div>
@@ -65,9 +65,11 @@
             <div class="col-sm-6 col-md-3 d-flex flex-column align-items-start">
                 <div class="d-flex flex-column align-items-start">
                     <h3>Club Ysana</h3>
-                    <ol>
+                    <ol class="pl-0">
                         <li>
-                            <a href="#">Logo :)</a>
+                            <a href="#">
+                                <img src="<?php echo $ruta_inicio; ?>img/svg/clubysanaicono.svg" height="64px" alt="">
+                            </a>
                         </li>
                     </ol>
                 </div>

@@ -25,7 +25,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
     <?php include_once('../inc/main_menu.inc.php'); ?>
     <div class="container-fluid">
         <nav>
-            <ol class="breadcrumb bg-white ml-5">
+            <ol class="breadcrumb bg-white pl-0">
                 <li class="breadcrumb-item">
                     <a href="#">Ysana</a>
                 </li>

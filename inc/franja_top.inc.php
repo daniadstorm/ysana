@@ -18,6 +18,12 @@ foreach ($arr_mmnu as $k => $v) {
     $html_mmnu .=   '<a class="nav-link" href="'.$v['url'].'">'.$v['txt'].'</a>';
     $html_mmnu .= '</li>';
 }
+    $html_mmnu .= '<li class="nav-item d-block d-sm-none">';
+    $html_mmnu .=   '<a class="nav-link text-light" href="'.$ruta_inicio.'"new-account.php>Iniciar Sesión</a>';
+    $html_mmnu .= '</li>';
+    $html_mmnu .= '<li class="nav-item d-block d-sm-none">';
+    $html_mmnu .=   '<a class="nav-link text-light" href="'.$ruta_inicio.'"new-account.php>Crear cuenta</a>';
+    $html_mmnu .= '</li>';
 
 //POST__________________________________________________________________________
 //POST__________________________________________________________________________
@@ -43,15 +49,18 @@ if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= USER)
     <div class="d-flex align-items-center">
       <?php
             if(!isset($_SESSION['id_tipo_usuario'])){?>
-      <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Inicio Sesión</a>
-      <label class="ml-1 mr-1 text-light">|</label>
-      <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Crear cuenta</a>
+      <div class="d-none d-sm-block">
+        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Inicio Sesión</a>
+        <label class="ml-1 mr-1 text-light">|</label>
+        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Crear cuenta</a>
+      </div>
+
       <?php } ?>
       <a href="<?php echo $ruta_inicio; ?>experiencia/carrito.php">
-      <div class="carrito-img p-2 mx-3">
-        <img src="https://png.icons8.com/material-rounded/38/FFFFFF/shopping-cart.png" class="">
-        <label class="num">2</label>
-      </div>
+        <div class="carrito-img p-2 mx-3">
+          <img src="<?php echo $ruta_inicio; ?>img/svg/carro2.svg" width="32px" class="">
+          <label class="num">2</label>
+        </div>
       </a>
     </div>
     <div class="navbar-collapse collapse" id="navbarCollapse">

@@ -45,7 +45,8 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDFx3GJG8Cri8XizqqdDIz_ss_xAoMFuJCLAww8XboGhBJQXnq"
+                            alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="Third slide">
@@ -62,28 +63,27 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
             </div>
         </div>
         <div class="contquiensomos">
-        <div class="container">
-            <div id="quiensomos" class="d-flex flex-column align-items-center">
-                <div class="titulo mt-4">
-                    <h2>¿Quiénes somos?</h2>
-                </div>
-                <div class="separadorqs"></div>
-                <img src="<?php echo $ruta_inicio; ?>img/home/1.png" alt="" class="img-botella">
-                <img src="<?php echo $ruta_inicio; ?>img/home/6.png" alt="" class="img-hoja1">
-                <img src="<?php echo $ruta_inicio; ?>img/home/5.png" alt="" class="img-botella2">
-                <div class="info bg-white">
-                    <div class="contenido">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus. Aenean
-                            efficitur nisi at fringilla molestie. Nunc varius, ipsum a iaculis interdum, sem dui blandit
-                            ligula, vitae egestas arcu tortor finibus lectus.</p>
-                        <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
-                        <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
-                        <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
+            <div class="container">
+                <div id="quiensomos" class="d-flex flex-column align-items-center">
+                    <div class="titulo my-5">
+                        <h2>¿Quiénes somos?</h2>
                     </div>
+                    <div class="separadorqs"></div>
+                    <img src="<?php echo $ruta_inicio; ?>img/home/1.png" alt="" class="img-botella">
+                    <img src="<?php echo $ruta_inicio; ?>img/home/6.png" alt="" class="img-hoja1">
+                    <img src="<?php echo $ruta_inicio; ?>img/home/5.png" alt="" class="img-botella2">
+                    <div class="info qs bg-white">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
+                                Aenean efficitur nisi at fringilla molestie.</p>
+                            <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
+                            <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
+                            <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
+                        </div>
+                    </div>
+                    <div class="separadorqs"></div>
                 </div>
-                <div class="separadorqs"></div>
             </div>
-        </div>
         </div>
         <div class="clubysana">
             <div class="info d-flex justify-content-center align-items-center">
@@ -97,14 +97,14 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
         </div>
         <div class="container">
             <div class="novedades text-center">
-                <div class="titulo mt-4">
+                <div class="titulo my-5">
                     <h2>Novedades</h2>
                 </div>
                 <!-- d-flex flex-row justify-content-center mt-4 -->
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center mb-3">
                         <div class="adelgaysana">
                             <div class="img">
                                 <div class="d-none d-sm-block">
@@ -114,20 +114,27 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
                                     </div>
                                 </div>
-                                <div class="d-block d-sm-none">
+
+                            </div>
+                            <!-- <div class="d-block d-sm-none">
                                     <div class="infoxs">
                                         <h1>AdelgaYsana Forte</h1>
                                         <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
                                             a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
                                     </div>
-                                </div>
+                                </div> -->
+                        </div>
+                        <div class="d-block d-sm-none">
+                            <div class="infoxs">
+                                <h1>AdelgaYsana Forte</h1>
+                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
+                                    Aenean efficitur nisi at fringilla molestie.</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6">
-                    <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center mb-3">
                         <div class="freenose">
                             <div class="img">
                                 <div class="d-none d-sm-block">
@@ -137,57 +144,87 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
                                     </div>
                                 </div>
-                                <div class="d-block d-sm-none">
-                                        <div class="infoxs">
-                                            <h1>AdelgaYsana Forte</h1>
-                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
-                                                    a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
-                                        </div>
+                                <!-- <div class="d-block d-sm-none">
+                                    <div class="infoxs">
+                                        <h1>AdelgaYsana Forte</h1>
+                                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
+                                            a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
                                     </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="d-block d-sm-none">
+                            <div class="infoxs">
+                                <h1>AdelgaYsana Forte</h1>
+                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
+                                    Aenean efficitur nisi at fringilla molestie.</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-        <div class="container contacto mt-4">
-            <div class="d-flex justify-content-end align-items-center position-relative">
-                <div class="titulo position-absolute">
-                    <h1>Formulario</h1>
-                    <h1>Contacto</h1>
-                </div>
-                <div class="frmcontacto">
-                    <form action="#">
-                        <?php echo $iM->get_input_text($frm_nombre, $frm_nombre, $class='form-control border-frm-contact', $lbl='', $placeholder='Nombre y Apellidos'); ?>
-                        <?php echo $iM->get_input_text($frm_email, $frm_email, $class='form-control border-frm-contact', $lbl='', $placeholder='E-mail'); ?>
-                        <?php echo $iM->get_input_text($frm_direccion, $frm_direccion, $class='form-control border-frm-contact', $lbl='', $placeholder='Dirección'); ?>
-                        <div class="">
-                            <div class="row">
-                                <?php echo $iM->get_input_text($frm_cp, $frm_cp, $class='form-control border-frm-contact', $lbl='', $placeholder='CP','',false,false,false,'col-md-6 mb-3'); ?>
-                                <?php echo $iM->get_input_text($frm_tel, $frm_tel, $class='form-control border-frm-contact', $lbl='', $placeholder='Telf','',false,false,false,'col-md-6 mb-3'); ?>
+        <div class="bg-contacto">
+            <div class="container contacto mt-4">
+                <div class="d-flex justify-content-end align-items-center position-relative">
+                    <div class="titulo position-absolute">
+                        <h1>Formulario</h1>
+                        <h1>Contacto</h1>
+                    </div>
+                    <div class="frmcontacto">
+                        <form action="#">
+                            <div class="titulo mb-3">
+                                <div class="d-flex justify-content-center">
+                                    <h2>Formulario Contacto</h2>
+                                </div>
                             </div>
-                        </div>
-                        <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $placeholder='Tu pregunta'); ?>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere tempor nunc ut rhoncus.
-                            Sed eget urna nec nunc pellentesque maximus vitae sed lectus. Sed non volutpat erat. Duis sit
-                            amet iaculis massa, sed congue libero. Phasellus hendrerit ut nulla vitae malesuada.</p>
-                        <div class="form-check">
-                            <div class="row">
-                                <div class="col-md-8 d-flex align-items-center">
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" name="terminos_condiciones" id="terminos_condiciones" value="option1" required>
-                                        <label class="form-check-label" for="exampleRadios1">
-                                            Acepto politica de privacidad
-                                        </label>
+                            <?php echo $iM->get_input_text($frm_nombre, $frm_nombre, $class='form-control border-frm-contact', $lbl='', $placeholder='Nombre y Apellidos'); ?>
+                            <?php echo $iM->get_input_text($frm_email, $frm_email, $class='form-control border-frm-contact', $lbl='', $placeholder='E-mail'); ?>
+                            <?php echo $iM->get_input_text($frm_direccion, $frm_direccion, $class='form-control border-frm-contact', $lbl='', $placeholder='Dirección'); ?>
+                            <div class="">
+                                <div class="row">
+                                    <?php echo $iM->get_input_text($frm_cp, $frm_cp, $class='form-control border-frm-contact', $lbl='', $placeholder='CP','',false,false,false,'col-md-6 mb-3'); ?>
+                                    <?php echo $iM->get_input_text($frm_tel, $frm_tel, $class='form-control border-frm-contact', $lbl='', $placeholder='Telf','',false,false,false,'col-md-6 mb-3'); ?>
+                                </div>
+                            </div>
+                            <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $placeholder='Tu pregunta'); ?>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere tempor nunc ut rhoncus.
+                                Sed eget urna nec nunc pellentesque maximus vitae sed lectus. Sed non volutpat erat. Duis
+                                sit amet iaculis massa, sed congue libero. Phasellus hendrerit ut nulla vitae malesuada.</p>
+                            <!-- <div class="form-check">
+                                <div class="row">
+                                    <div class="col-md-8 d-flex align-items-center">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="terminos_condiciones" id="terminos_condiciones" value="option1" required>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                <p class="mb-0">Acepto politica de privacidad</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6">Enviar</button>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-5">Enviar</button>
+                            </div> -->
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="form-check pl-0 mb-2 d-flex align-items-center">
+                                        <!-- <input class="form-check-input" type="checkbox" id="autoSizingCheck"> -->
+                                        <div class="roundedOne">
+                                            <input type="checkbox" id="roundedOne" name="terminos_condiciones" required />
+                                            <label for="roundedOne"></label>
+                                        </div>
+                                        <p class="form-check-label ml-2" for="autoSizingCheck">
+                                            Acepto politica de privacidad
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6">Submit</button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

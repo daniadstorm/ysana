@@ -10,7 +10,7 @@
     --ysana-color-8: #F23F00;    
 }
 html, body { margin:0;padding:0; }
-body { /* background-color:#f2f2f2; */ font-family: 'Roboto' }
+body { /* background-color:#f2f2f2; */ font-family: 'Roboto'; font-weight: normal!important; }
 /*globales --------------------------------------------------------------------*/
 
 /*correcciones bootstrap ------------------------------------------------------*/
@@ -24,7 +24,10 @@ body { /* background-color:#f2f2f2; */ font-family: 'Roboto' }
 
 h1,h2,h3,h4,h5,h6{
     color: var(--ysana-color-6);
-    font-weight: bold;
+    font-weight: 500;
+}
+p{
+    color: var(--ysana-color-6);
 }
 .text-color-1{
     color: var(--ysana-color-1);
@@ -41,6 +44,12 @@ h1,h2,h3,h4,h5,h6{
 .btn-color-5{
     border-color: #f39400;
     background-color: #f39400;
+}
+.btn-color-6{
+    background-color: var(--ysana-color-6);
+}
+.btn-color-6:hover{
+    background-color: var(--ysana-color-5);
 }
 .btn-color-8{
     background-color: var(--ysana-color-8);
@@ -74,6 +83,14 @@ h1,h2,h3,h4,h5,h6{
 div.info p{
     margin-bottom: 0;
 }
+.bienvenido{
+    font-size: 0.9rem;
+}
+.bienvenidosx{
+    color: var(--ysana-color-6);
+    /* font-weight: bold; */
+    font-size: 0.9rem;
+}
 div.valoracion:nth-child(even){
     background-color: rgba(0, 0, 0, 0.06);
 }
@@ -106,9 +123,7 @@ ol.breadcrumb li a{
     width: 100%;
     text-align: center;
 }
-div.familias ul li{
-    border-radius: 1px;
-}
+
 div.familias ul li a{
     color: #fff;
     background-color: #000;
@@ -116,6 +131,9 @@ div.familias ul li a{
     margin-right: 1rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+}
+div.familias ul li a.nav-link{
+    border-radius: 0rem;
 }
 .tarjeta-articulo{
     width: 100%;
@@ -185,6 +203,7 @@ button.btn.btn-comprar.btn-sm {
     font-size: 1em;
     background-color: var(--ysana-color-5);
     border-color: var(--ysana-color-5);
+    border-radius: 0px;
 }
 .familias{
     max-width: 1280px;
@@ -237,10 +256,12 @@ div.footer2{
 }
 #frmbuscar{
     position: relative;
+    display: inline-block;
 }
 #frmbuscar input{
     padding-left: 40px;
     border: 0px;
+    width: 235px;
     position: relative;
     border-radius: 24px;
 }
@@ -248,6 +269,7 @@ div.footer2{
     position: absolute;
     max-width: 24px;
     left: 8px;
+    top: 6px;
 }
 #frmbuscar input:focus{
     box-shadow: 0 0 0 0.2rem rgba(0,0,0,0);
@@ -262,14 +284,27 @@ div.footer2{
 #nav_inicio li a{
     color: var(--ysana-color-6);
     font-weight: bold;
+    padding-bottom: 0;
 }
-div.info div.contenido{
+#nav_inicio li.nav-item{
+    border-bottom: 4px solid transparent;
+}
+/* #nav_inicio li.nav-item.active{
+    border-bottom: 4px solid var(--ysana-color-2);
+} */
+div.info.qs div.contenido{
+    max-width: 500px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 11px 2px 6px -1px #00000059;
+    position: relative;
+}
+div.clubysana div.info div.contenido{
     max-width: 600px;
     padding: 1.5rem;
     text-align: center;
-    /* box-shadow: 4px 4px 6px -4px #000; */
-    box-shadow: 0px 0px 6px -1px #000;
-    position: relative;
+    box-shadow: 3px 3px 6px -1px #00000059;
+    position: relative;    
 }
 div.info div.contenido p{
     z-index: 20;
@@ -313,7 +348,7 @@ div.adelgaysana div.img{
     background-size: cover;
 }
 div.info h1{
-    font-size: 16px;
+    font-size: 22px;
 }
 div.adelgaysana div.info {
     position: absolute;
@@ -351,15 +386,21 @@ div.freenose div.info {
     font-size: 4rem;
 }
 .frmcontacto{
-    padding: 5rem;
+    /* padding: 5rem; */
+    padding: 2rem 5rem 2rem 5rem;
     max-width: 840px;
     background-color: var(--ysana-color-2);
 }
 div.contacto div.titulo{
     left: 0;
+    display: none;
 }
 .border-frm-contact{
     border-radius: 20px;
+    border: 0px solid;
+}
+.border-frm-contact:focus{
+    box-shadow: 0 0 0 0.2rem #ffffff00;
 }
 .liniacategoria{
     border-bottom: 3px solid var(--ysana-color-2);
@@ -430,18 +471,29 @@ div.farmacias div.lista{
 .lista .farmacia{
     padding: 0.5rem;
 }
-div.infoxs {
+/* div.infoxs {
     background-color: #ffffffcf;
     position: absolute;
     bottom: 0;
     padding: .5rem;
     margin: .5rem;
+    font-weight: normal;
+} */
+div.infoxs {
+    background-color: #f2f2f2;
+    position: relative;
+    padding: .5rem;
+    width: 350px;
+    /* margin: .5rem; */
 }
 div.infoxs h1 {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 22px;
+    font-weight: 500;
 }
 div.infoxs p {
     font-size: 16px;
+    font-weight: normal;
 }
 .img-ysanaclub{
     max-height: 200px;
@@ -492,6 +544,10 @@ div.infoxs p {
 .btn-mini{
     padding: 0px 6px;
 }
+.tabla-carrito{
+    overflow: hidden;
+    overflow-x: auto;
+}
 .tabla-carrito td{
     vertical-align: middle;
 }
@@ -524,18 +580,18 @@ div.infoxs p {
 .carrito-img .num{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 18px;
     right: 0;
     margin: auto;
-    border: 2px solid #00abc8;
+    /* border: 2px solid #00abc8; */
     background-color: #fff;
     border-radius: 12px;
     text-align: center;
     font-size: 1rem;
     width: 22px;
-    height: 24px;
+    height: 22px;
     color: #00abc8;
-    font-weight: bold;
+    font-weight: 500;
 }
 #quiensomos{
     /* overflow: hidden; */
@@ -592,6 +648,135 @@ div.infoxs p {
 .contquiensomos{
     overflow: hidden;
 }
+div.frmcontacto div.titulo{
+    display: block;
+}
+.botones{
+    margin-left: auto;
+}
+#acor_head1{
+    background-image: url('images/1.png');
+    background-repeat: no-repeat;
+    background-position: 75%;
+    background-size: contain;
+}
+#acor_head2{
+    background-image: url('images/3.png');
+    background-repeat: no-repeat;
+    background-position: 75%;
+    background-size: contain;
+}
+#acor_head3{
+    background-image: url('images/6.png');
+    background-repeat: no-repeat;
+    background-position: 75%;
+    background-size: contain;
+}
+#acor_head4{
+    background-image: url('images/2.png');
+    background-repeat: no-repeat;
+    background-position: 75%;
+    background-size: contain;
+}
+#acor_head5{
+    background-image: url('images/4.png');
+    background-repeat: no-repeat;
+    background-position: 75%;
+    background-size: contain;
+}
+
+/* .roundedOne */
+.roundedOne {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    background: #fcfff4;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .roundedOne label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  }
+  .roundedOne label:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #f39400;
+    background: linear-gradient(to bottom, #f39400 0%, #ffcd7c 100%);
+    opacity: 0;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .roundedOne label:hover::after {
+    opacity: 0.3;
+  }
+  .roundedOne input[type=checkbox] {
+    z-index: -1;
+    position: relative;
+  }
+  .roundedOne input[type=checkbox]:checked + label:after {
+    opacity: 1;
+  }
+  .ficha_producto {
+    margin-top: 2rem;
+}
+.ficha_producto img {
+    /* padding: 2rem;
+    max-width: 350px;
+    max-height: 350px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 80%;
+}
+.ficha_producto div.imagen{
+    /* background-color: #f2f2f2;
+    display: flex; */
+    position: relative;
+    width: 100%;
+    /* width: 350px; */
+    height: 350px;
+    max-width: 350px;
+    max-height:  350px;
+    background-color: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; */
+}
+p.ficha_producto-desc{
+    margin-top: 1rem;
+}
+.ficha_producto-btn_compra{
+    font-weight: 500;
+}
+
+  /* end .roundedOne */
+  
+
+/* p.m-0.text-light {
+    font-size: .9rem;
+} */
 /*Ysana ----------------------------------------------------------------------*/
 
 /* [class^='col-']{
@@ -611,11 +796,27 @@ div.infoxs p {
         bottom: 0em;
         max-width: 50px;
     }
+    .bg-contacto{
+        background-color: var(--ysana-color-2);
+    }
+    ul#nav_inicio li.nav-item{
+        padding: .3rem;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     #quiensomos .img-hoja1 {
         width: 80%;
+    }
+    .bg-contacto{
+        background-color: var(--ysana-color-2);
+    }
+    .frmcontacto{
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    ul#nav_inicio li.nav-item{
+        padding: .3rem;
     }
 }
 
@@ -629,6 +830,12 @@ div.infoxs p {
     #quiensomos .img-hoja1 {
         width: 60%;
     }
+    .bg-contacto{
+        background-color: var(--ysana-color-2);
+    }
+    ul#nav_inicio li.nav-item{
+        padding: .3rem;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -638,12 +845,25 @@ div.infoxs p {
     #quiensomos .img-hoja1 {
         width: 46%;
     }
+    #nav_inicio li.nav-item.active{
+        border-bottom: 4px solid var(--ysana-color-2);
+    }
 }
 
 @media (min-width: 1200px) {
     .carousel-inner{
         height: 400px;
     }
+    div.contacto div.titulo{
+        display: block;
+    }
+    div.frmcontacto div.titulo{
+        display: none;
+    }
+    #nav_inicio li.nav-item.active{
+        border-bottom: 4px solid var(--ysana-color-2);
+    }
+    
 }
 
 /* @media (max-width: 576px) { 
