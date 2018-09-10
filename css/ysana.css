@@ -285,6 +285,7 @@ div.footer2{
     color: var(--ysana-color-6);
     font-weight: bold;
     padding-bottom: 0;
+    position: relative;
 }
 #nav_inicio li.nav-item{
     border-bottom: 4px solid transparent;
@@ -771,8 +772,21 @@ p.ficha_producto-desc{
     font-weight: 500;
 }
 
-  /* end .roundedOne */
-  
+div[class*="menu_"]{
+    padding: 2rem;
+    width: 20%;
+}
+div[class*="menu_"] ul{
+    padding-left: 0;
+}
+div[class*="menu_"] div ul li {
+    list-style: outside;
+    margin-left: 2.5rem;
+}
+div[class*="menu_"] div ul p {
+    border-bottom: 1.5px solid black;
+    margin-right: -1.5rem;
+}
 
 /* p.m-0.text-light {
     font-size: .9rem;
