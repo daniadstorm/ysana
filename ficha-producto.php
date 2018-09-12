@@ -34,6 +34,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
 
     <?php //include_once('inc/footer.inc.php'); ?>
     <main id="content" role="main">
+        <h1><?php echo $lng['ttl_idioma']; ?></h1>
         <div class="container-fluid">
             <nav class="d-none d-sm-block">
                 <ol class="breadcrumb bg-white pl-0">

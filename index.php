@@ -66,7 +66,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
             <div class="container">
                 <div id="quiensomos" class="d-flex flex-column align-items-center">
                     <div class="titulo my-5">
-                        <h2>¿Quiénes somos?</h2>
+                        <h2><?php echo $lng['index'][0]; ?></h2>
                     </div>
                     <div class="separadorqs"></div>
                     <img src="<?php echo $ruta_inicio; ?>img/home/1.png" alt="" class="img-botella">
@@ -74,8 +74,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                     <img src="<?php echo $ruta_inicio; ?>img/home/5.png" alt="" class="img-botella2">
                     <div class="info qs bg-white">
                         <div class="contenido">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
-                                Aenean efficitur nisi at fringilla molestie.</p>
+                            <p><?php echo $lng['index'][1]; ?></p>
                             <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
                             <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
                             <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
@@ -98,7 +97,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
         <div class="container">
             <div class="novedades text-center">
                 <div class="titulo my-5">
-                    <h2>Novedades</h2>
+                    <h2><?php echo $lng['index'][2]; ?></h2>
                 </div>
                 <!-- d-flex flex-row justify-content-center mt-4 -->
             </div>
@@ -109,9 +108,8 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                             <div class="img">
                                 <div class="d-none d-sm-block">
                                     <div class="info">
-                                        <h1>AdelgaYsana Forte</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
-                                            a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
+                                        <h1><?php echo $lng['index'][3]; ?></h1>
+                                        <p><?php echo $lng['index'][4]; ?></p>
                                     </div>
                                 </div>
 
@@ -126,9 +124,8 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         </div>
                         <div class="d-block d-sm-none">
                             <div class="infoxs">
-                                <h1>AdelgaYsana Forte</h1>
-                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
-                                    Aenean efficitur nisi at fringilla molestie.</p>
+                                <h1><?php echo $lng['index'][5]; ?></h1>
+                                <p class="m-0"><?php echo $lng['index'][6]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -139,9 +136,8 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                             <div class="img">
                                 <div class="d-none d-sm-block">
                                     <div class="info">
-                                        <h1>AdelgaYsana Forte</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
-                                            a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
+                                        <h1><?php echo $lng['index'][3]; ?></h1>
+                                        <p><?php echo $lng['index'][4]; ?></p>
                                     </div>
                                 </div>
                                 <!-- <div class="d-block d-sm-none">
@@ -155,9 +151,8 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         </div>
                         <div class="d-block d-sm-none">
                             <div class="infoxs">
-                                <h1>AdelgaYsana Forte</h1>
-                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus.
-                                    Aenean efficitur nisi at fringilla molestie.</p>
+                                <h1><?php echo $lng['index'][5]; ?></h1>
+                                <p class="m-0"><?php echo $lng['index'][6]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -168,29 +163,27 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
             <div class="container contacto mt-4">
                 <div class="d-flex justify-content-end align-items-center position-relative">
                     <div class="titulo position-absolute">
-                        <h1>Formulario</h1>
-                        <h1>Contacto</h1>
+                        <h1><?php echo $lng['index'][7]; ?></h1>
+                        <h1><?php echo $lng['index'][8]; ?></h1>
                     </div>
                     <div class="frmcontacto">
                         <form action="#">
                             <div class="titulo mb-3">
                                 <div class="d-flex justify-content-center">
-                                    <h2>Formulario Contacto</h2>
+                                    <h2><?php echo $lng['index'][7]; ?> <?php echo $lng['index'][8]; ?></h2>
                                 </div>
                             </div>
-                            <?php echo $iM->get_input_text($frm_nombre, $frm_nombre, $class='form-control border-frm-contact', $lbl='', $placeholder='Nombre y Apellidos'); ?>
-                            <?php echo $iM->get_input_text($frm_email, $frm_email, $class='form-control border-frm-contact', $lbl='', $placeholder='E-mail'); ?>
-                            <?php echo $iM->get_input_text($frm_direccion, $frm_direccion, $class='form-control border-frm-contact', $lbl='', $placeholder='Dirección'); ?>
+                            <?php echo $iM->get_input_text($frm_nombre, $frm_nombre, $class='form-control border-frm-contact', $lbl='', $lng['index'][12]); ?>
+                            <?php echo $iM->get_input_text($frm_email, $frm_email, $class='form-control border-frm-contact', $lbl='', $lng['index'][13]); ?>
+                            <?php echo $iM->get_input_text($frm_direccion, $frm_direccion, $class='form-control border-frm-contact', $lbl='', $lng['index'][14]); ?>
                             <div class="">
                                 <div class="row">
-                                    <?php echo $iM->get_input_text($frm_cp, $frm_cp, $class='form-control border-frm-contact', $lbl='', $placeholder='CP','',false,false,false,'col-md-6 mb-3'); ?>
-                                    <?php echo $iM->get_input_text($frm_tel, $frm_tel, $class='form-control border-frm-contact', $lbl='', $placeholder='Telf','',false,false,false,'col-md-6 mb-3'); ?>
+                                    <?php echo $iM->get_input_text($frm_cp, $frm_cp, $class='form-control border-frm-contact', $lbl='', $lng['index'][15],'',false,false,false,'col-md-6 mb-3'); ?>
+                                    <?php echo $iM->get_input_text($frm_tel, $frm_tel, $class='form-control border-frm-contact', $lbl='', $lng['index'][16],'',false,false,false,'col-md-6 mb-3'); ?>
                                 </div>
                             </div>
-                            <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $placeholder='Tu pregunta'); ?>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere tempor nunc ut rhoncus.
-                                Sed eget urna nec nunc pellentesque maximus vitae sed lectus. Sed non volutpat erat. Duis
-                                sit amet iaculis massa, sed congue libero. Phasellus hendrerit ut nulla vitae malesuada.</p>
+                            <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $lng['index'][17]); ?>
+                            <p><?php echo $lng['index'][9]; ?></p>
                             <!-- <div class="form-check">
                                 <div class="row">
                                     <div class="col-md-8 d-flex align-items-center">
@@ -215,12 +208,12 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                             <label for="roundedOne"></label>
                                         </div>
                                         <p class="form-check-label ml-2" for="autoSizingCheck">
-                                            Acepto politica de privacidad
+                                            <?php echo $lng['index'][10]; ?>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6">Submit</button>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6"><?php echo $lng['index'][11]; ?></button>
                                 </div>
                             </div>
                         </form>

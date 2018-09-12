@@ -6,38 +6,38 @@
         <div class="row">
             <div class="col-sm-6 col-md-3 d-flex flex-column align-items-start">
                 <div class="d-flex flex-column align-items-start">
-                    <h3>Sobre Ysana</h3>
+                    <h3><?php echo $lng['footer'][0]; ?></h3>
                     <ol>
                         <li>
-                            <a href="#">Valores</a>
+                            <a href="#"><?php echo $lng['footer'][1]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Compañía</a>
+                            <a href="#"><?php echo $lng['footer'][2]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Compromiso</a>
+                            <a href="#"><?php echo $lng['footer'][3]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Código ético</a>
+                            <a href="#"><?php echo $lng['footer'][4]; ?></a>
                         </li>
                     </ol>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 d-flex flex-column align-items-start">
                 <div class="d-flex flex-column align-items-start">
-                    <h3>Sala Prensa</h3>
+                    <h3><?php echo $lng['footer'][5]; ?></h3>
                     <ol>
                         <li>
-                            <a href="#">Prensa</a>
+                            <a href="#"><?php echo $lng['footer'][6]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Noticias</a>
+                            <a href="#"><?php echo $lng['footer'][7]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Vídeos</a>
+                            <a href="#"><?php echo $lng['footer'][8]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Material gráfico</a>
+                            <a href="#"><?php echo $lng['footer'][9]; ?></a>
                         </li>
 
                     </ol>
@@ -45,26 +45,26 @@
             </div>
             <div class="col-sm-6 col-md-3 d-flex flex-column align-items-start">
                 <div class="d-flex flex-column align-items-start">
-                    <h3>Políticas</h3>
+                    <h3><?php echo $lng['footer'][10]; ?></h3>
                     <ol>
                         <li>
-                            <a href="#">Aviso Legal</a>
+                            <a href="#"><?php echo $lng['footer'][11]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Política de privacidad</a>
+                            <a href="#"><?php echo $lng['footer'][12]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Política de cookies</a>
+                            <a href="#"><?php echo $lng['footer'][13]; ?></a>
                         </li>
                         <li>
-                            <a href="#">Política de ventas</a>
+                            <a href="#"><?php echo $lng['footer'][14]; ?></a>
                         </li>
                     </ol>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 d-flex flex-column align-items-start">
                 <div class="d-flex flex-column align-items-start">
-                    <h3>Club Ysana</h3>
+                    <h3><?php echo $lng['footer'][15]; ?></h3>
                     <ol class="pl-0">
                         <li>
                             <a href="#">

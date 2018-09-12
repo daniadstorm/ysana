@@ -22,7 +22,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
 
 <body>
     <?php include_once('../inc/franja_top.inc.php'); ?>
-    <?php include_once('../inc/main_menu.inc.php'); ?>
+    <?php //include_once('../inc/main_menu.inc.php'); ?>
     <div class="container-fluid">
         <nav>
             <ol class="breadcrumb bg-white pl-0">
@@ -108,7 +108,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -136,7 +136,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -164,7 +164,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -192,7 +192,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -220,7 +220,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -248,7 +248,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -276,7 +276,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>
@@ -304,7 +304,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm">COMPRAR</button>
+                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
                                 </div>
                             </header>
                         </div>

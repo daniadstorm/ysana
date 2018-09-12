@@ -1,7 +1,18 @@
-RewriteEngine On
+#Web guia
+#https://www.bonaval.com/kb/sistemas-operativos/linux-sistemas-operativos/ejemplos-de-htaccess-que-todo-webmaster-deberia-conocer
 
-RewriteCond ${REQUEST_FILENAME} !-d
-RewriteCond ${REQUEST_FILENAME} !-f
-RewriteCond ${REQUEST_FILENAME} !-l
+Allow from all
+Options All -Indexes
 
-RewriteRule ^(.*)$ index.php?url=$1 [L]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /ysana/
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?idioma_seleccionado=$1 [L]
+#RewriteRule ^(.{0})$ es [R=301,L]
+
+#RewriteRule ^([a-zA-Z_-]+)/fichaproducto/([a-zA-Z_-]+)$ ficha-producto.php?idioma_seleccionado=$1&id=$2 [L]
+
+</IfModule>

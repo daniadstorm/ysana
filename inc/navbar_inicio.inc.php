@@ -22,13 +22,13 @@
                         </form>
                     </li>
                     <li class="nav-item <?php echo ($activePage == 'productos') ? 'active':''; ?> text-right">
-                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>productos.php">Productos</a>
+                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>productos.php"><?php echo $lng['navbar_inicio'][0]; ?></a>
                     </li>
                     <li class="nav-item text-right">
-                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>experiencia/index.php">Experiencias</a>
+                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>experiencia/index.php"><?php echo $lng['navbar_inicio'][1]; ?></a>
                     </li>
                     <li class="nav-item <?php echo ($activePage=='') ? 'active':''; ?> text-right">
-                        <a class="nav-link" href="#">Directo Farmacia</a>
+                        <a class="nav-link" href="#"><?php echo $lng['navbar_inicio'][2]; ?></a>
                     </li>
                     <li class="nav-item text-right">
                         <a class="nav-link pt-0 mt-0" href="#">
@@ -36,10 +36,10 @@
                         </a>
                     </li>
                     <li class="nav-item <?php echo ($activePage=='') ? 'active':''; ?> text-right">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#"><?php echo $lng['navbar_inicio'][3]; ?></a>
                     </li>
                     <li class="nav-item d-block d-sm-none text-right">
-                        <p class="m-0 bienvenidosx">Bienvenido a Ysana Vida Sana</p>
+                        <p class="m-0 bienvenidosx"><?php echo $lng['navbar_inicio'][4]; ?></p>
                     </li>
                 </ul>
             </div>

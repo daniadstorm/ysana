@@ -31,19 +31,19 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                     <div class="carrito p-3">
                         <h1 class="h3 m-b-1">
                             <strong>(2)</strong>
-                            Artículos en
-                            <strong>tu cesta</strong>
+                            <?php echo $lng['experiencia-carrito'][0]; ?>
+                            <strong> <?php echo $lng['experiencia-carrito'][1]; ?></strong>
                         </h1>
 
                         <div class="tabla-carrito pt-2">
                             <table class="table">
                                 <thead class="bg-grayopacity-ysana">
                                     <tr>
-                                        <th scope="col">ARTÍCULO</th>
+                                        <th scope="col"><?php echo $lng['experiencia-carrito'][2]; ?></th>
                                         <th scope="col"></th>
-                                        <th scope="col">PRECIO</th>
-                                        <th scope="col">UNIDADES</th>
-                                        <th scope="col">TOTAL</th>
+                                        <th scope="col"><?php echo $lng['experiencia-carrito'][3]; ?></th>
+                                        <th scope="col"><?php echo $lng['experiencia-carrito'][4]; ?></th>
+                                        <th scope="col"><?php echo $lng['experiencia-carrito'][5]; ?></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -133,12 +133,11 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             <div class="ticket-pago">
                                 <div class="ticket-pago_desglose">
                                     <div class="ticket-pago_articulos">
-                                        Con Ysana puedes beneficiarte de gastos de envío
-                                        <strong>GRATIS</strong>
+                                        <?php echo $lng['experiencia-carrito'][6]; ?>
                                     </div>
                                     <div class="ticket-pago_total">
                                         <strong class="w-100">
-                                            TOTAL
+                                            <?php echo $lng['experiencia-carrito'][7]; ?>
                                             <span class="pull-xs-right">150 €</span>
                                         </strong>
                                     </div>
@@ -146,7 +145,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             </div>
                         </div>
                         <form action="">
-                            <button type="submit" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light">REALIZAR PEDIDO</button>
+                            <button type="submit" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light"><?php echo $lng['experiencia-carrito'][8]; ?></button>
                         </form>
                     </div>
                     <!-- <div class="lista-top">

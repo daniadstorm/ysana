@@ -50,9 +50,9 @@ if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= USER)
       <?php
             if(!isset($_SESSION['id_tipo_usuario'])){?>
       <div class="d-none d-sm-block">
-        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Inicio Sesión</a>
+        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1"><?php echo $lng['experiencia-index'][1]; ?></a>
         <label class="ml-1 mr-1 text-light">|</label>
-        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1">Crear cuenta</a>
+        <a href="<?php $ruta_archivos?>new-account.php" class="text-light pb-1"><?php echo $lng['experiencia-index'][2]; ?></a>
       </div>
 
       <?php } ?>
