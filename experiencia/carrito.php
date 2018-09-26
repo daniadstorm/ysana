@@ -88,7 +88,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                         </th>
                                         <td>
                                             <div class="dato-carrito">
-                                                <div class="h5">LG 25UM58-P 25" LED IPS Ultrawide</div>
+                                                <div class="h5">Tele de prueba con un nombre muy muy muy laaargo</div>
                                             </div>
                                         </td>
                                         <td>150€</td>
@@ -109,7 +109,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                         </th>
                                         <td>
                                             <div class="dato-carrito">
-                                                <div class="h5">LG 32LJ510B 32" HD LED</div>
+                                                <div class="h5">Tele de prueba</div>
                                             </div>
                                         </td>
                                         <td>169€</td>

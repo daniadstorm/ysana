@@ -1,6 +1,9 @@
 <?php
 
 ?>
+<div id="footer-img" class="container-fluid px-0">
+<img id="img-footer" src="<?php echo $ruta_inicio; ?>img/ysana-footer.svg" alt="">
+</div>
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -9,7 +12,7 @@
                     <h3><?php echo $lng['footer'][0]; ?></h3>
                     <ol>
                         <li>
-                            <a href="#"><?php echo $lng['footer'][1]; ?></a>
+                            <a href=""><?php echo $lng['footer'][1]; ?></a>
                         </li>
                         <li>
                             <a href="#"><?php echo $lng['footer'][2]; ?></a>
@@ -19,6 +22,9 @@
                         </li>
                         <li>
                             <a href="#"><?php echo $lng['footer'][4]; ?></a>
+                        </li>
+                        <li>
+                            <a href="productos_ysana"><?php echo $lng['footer'][16]; ?></a>
                         </li>
                     </ol>
                 </div>

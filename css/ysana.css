@@ -32,6 +32,9 @@ p{
 .text-color-1{
     color: var(--ysana-color-1);
 }
+.text-color-2{
+    color: var(--ysana-color-2) !important;
+}
 .text-color-3{
     color: var(--ysana-color-3);
 }
@@ -126,7 +129,7 @@ ol.breadcrumb li a{
 
 div.familias ul li a{
     color: #fff;
-    background-color: #000;
+    background-color: var(--ysana-color-6);
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 0.25rem;
@@ -313,14 +316,64 @@ div.info div.contenido p{
 .separadorqs{
     height: 13vh;
 }
+.bg-clubysana{
+    background-color: #e6007e;
+}
 .clubysana{
     height: 50vh;
     background-color: #e6007e;
+    min-height: 300px;
 }
 .clubysana .info{
     height: 100%;
 }
+.coming-soon{
+    display: flex;
+}
 
+div.coming-soon .izquierda{
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    /* -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; */
+}
+div.coming-soon .derecha{
+    /* -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; */
+    /* display: none; */
+    animation-duration: 4s;
+    animation-name: slideinYsana;
+}
+
+@keyframes slideinYsana {
+    from {
+      width: 0%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.aparecer-ysana{
+    /* display: block !important; */
+    width: 100% !important;
+    /* -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; */
+}
+
+/* #footer-img{
+    position: absolute;
+    bottom: -39px;
+} */
 div.adelgaysana{
     position: relative;
     height: 350px;
@@ -363,7 +416,7 @@ div.adelgaysana div.info {
     width: auto;
     max-width: 270px;
     background-color: white;
-    height: 180px;
+    height: 64%;
     padding: 1rem;
     box-shadow: 3px 2px 13px -3px;
 }
@@ -379,7 +432,7 @@ div.freenose div.info {
     width: auto;
     max-width: 270px;
     background-color: white;
-    height: 180px;
+    height: 64%;
     padding: 1rem;
     box-shadow: 3px 2px 13px -3px;
 }
@@ -658,31 +711,37 @@ div.frmcontacto div.titulo{
 #acor_head1{
     background-image: url('images/1.png');
     background-repeat: no-repeat;
-    background-position: 75%;
+    background-position: 100%;
     background-size: contain;
 }
 #acor_head2{
     background-image: url('images/3.png');
     background-repeat: no-repeat;
-    background-position: 75%;
+    background-position: 100%;
     background-size: contain;
 }
 #acor_head3{
     background-image: url('images/6.png');
     background-repeat: no-repeat;
-    background-position: 75%;
+    background-position: 100%;
     background-size: contain;
 }
 #acor_head4{
     background-image: url('images/2.png');
     background-repeat: no-repeat;
-    background-position: 75%;
+    background-position: 100%;
     background-size: contain;
 }
 #acor_head5{
     background-image: url('images/4.png');
     background-repeat: no-repeat;
-    background-position: 75%;
+    background-position: 100%;
+    background-size: contain;
+}
+#acor_head6{
+    background-image: url('images/7.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
     background-size: contain;
 }
 
@@ -714,8 +773,8 @@ div.frmcontacto div.titulo{
     position: absolute;
     top: 2px;
     left: 2px;
-    background: #f39400;
-    background: linear-gradient(to bottom, #f39400 0%, #ffcd7c 100%);
+    background: #FFF;
+    background: linear-gradient(to bottom, #FFF 0%, #FFF 100%);
     opacity: 0;
     border-radius: 50px;
     box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
@@ -765,6 +824,12 @@ div.frmcontacto div.titulo{
     right: 0;
     margin: auto; */
 }
+#img-footer {
+    margin-bottom: -2px;
+}
+video.video-inline {
+    width: 100%;
+}
 p.ficha_producto-desc{
     margin-top: 1rem;
 }
@@ -787,7 +852,72 @@ div[class*="menu_"] div ul p {
     border-bottom: 1.5px solid black;
     margin-right: -1.5rem;
 }
-
+.jumbotronysana {
+    max-height: 500px;
+    /* background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg); */
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+/* .jumbotronysana{
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+} */
+.jumbotronyexperiencia{
+    max-height: 500px;
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+#coming-soon-derecha h1.titulo-comingsoon{
+    color: #e6007e;
+    font-weight: bold;
+}
+/* #coming-soon-derecha h1.titulo-comingsoon{
+    font-size: calc(1.3rem + 4vw);
+} */
+#coming-soon-derecha h2.descripcion-comingsoon{
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+.btn-leer-mas{
+    background-color: #f39400;
+    color: white;
+}
+.btn-leer-mas:hover{
+    background-color: #000f5a;
+}
+.max-w20{
+    max-width: 20%;
+}
+.footer-modificado{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    content: "";
+    min-width: 50%;
+    min-height: 100%;
+    background-color: var(--ysana-color-2);
+    right: 0;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+content: "|";
+}
+/* .max-w-producto{
+    width: 90%;
+} */
 /* p.m-0.text-light {
     font-size: .9rem;
 } */
@@ -816,7 +946,19 @@ div[class*="menu_"] div ul p {
     ul#nav_inicio li.nav-item{
         padding: .3rem;
     }
-
+    #coming-soon-derecha h2.descripcion-comingsoon{
+        font-size: 1.2rem;
+    }
+    .jumbotronysana{
+        background: url(http://192.168.1.2/ysana/img/slider_principal_resp.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 280px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -832,6 +974,18 @@ div[class*="menu_"] div ul p {
     ul#nav_inicio li.nav-item{
         padding: .3rem;
     }
+    #coming-soon-derecha h2.descripcion-comingsoon{
+        font-size: 1.2rem;
+    }
+    .jumbotronysana{
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -850,6 +1004,21 @@ div[class*="menu_"] div ul p {
     ul#nav_inicio li.nav-item{
         padding: .3rem;
     }
+    #coming-soon-derecha h1.titulo-comingsoon{
+        font-size: calc(2rem + 2vw);
+    }
+    #coming-soon-derecha h2.descripcion-comingsoon{
+        font-size: 1.3rem;
+    }
+    .jumbotronysana{
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -861,6 +1030,24 @@ div[class*="menu_"] div ul p {
     }
     #nav_inicio li.nav-item.active{
         border-bottom: 4px solid var(--ysana-color-2);
+    }
+    .max-w-producto{
+        width: 80%;
+    }
+    #coming-soon-derecha h1.titulo-comingsoon{
+        font-size: calc(2rem + 3vw);
+    }
+    #coming-soon-derecha h2.descripcion-comingsoon{
+        font-size: 1.7rem;
+    }
+    .jumbotronysana{
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
     }
 }
 
@@ -877,6 +1064,24 @@ div[class*="menu_"] div ul p {
     #nav_inicio li.nav-item.active{
         border-bottom: 4px solid var(--ysana-color-2);
     }
+    .max-w-producto{
+        width: 75%;
+    }
+    #coming-soon-derecha h1.titulo-comingsoon{
+        font-size: calc(1.3rem + 4vw);
+    }
+    #coming-soon-derecha h2.descripcion-comingsoon{
+        font-size: 2.1rem;
+    }
+    .jumbotronysana{
+    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
     
 }
 

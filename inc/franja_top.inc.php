@@ -44,7 +44,9 @@ if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= USER)
         aria-expanded="false" aria-label="Toggle navigation">
         <img src="<?php echo $ruta_archivos; ?>img/mnu-principal.png" width="34" />
       </button>
-      <a class="text-light" href="<?php echo $ruta_inicio; ?>">Ysana</a>
+      <a class="navbar-brand" href="<?php echo $ruta_inicio; ?>">
+        <img src="<?php echo $ruta_inicio; ?>img/svg/ysanablanco.svg" height="44px" alt="">
+      </a>
     </div>
     <div class="d-flex align-items-center">
       <?php

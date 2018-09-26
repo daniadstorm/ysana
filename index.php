@@ -34,33 +34,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
     <?php //include_once('inc/footer.inc.php'); ?>
     <main id="content" role="main">
         <div class="contenedor">
-            <div id="carouselindicador" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselindicador" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselindicador" data-slide-to="1"></li>
-                    <li data-target="#carouselindicador" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDFx3GJG8Cri8XizqqdDIz_ss_xAoMFuJCLAww8XboGhBJQXnq"
-                            alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselindicador" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselindicador" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+        <div class="jumbotronysana"></div>
         </div>
         <div class="contquiensomos">
             <div class="container">
@@ -73,8 +47,9 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                     <img src="<?php echo $ruta_inicio; ?>img/home/6.png" alt="" class="img-hoja1">
                     <img src="<?php echo $ruta_inicio; ?>img/home/5.png" alt="" class="img-botella2">
                     <div class="info qs bg-white">
-                        <div class="contenido">
+                        <div class="contenido pb-3">
                             <p><?php echo $lng['index'][1]; ?></p>
+                            <p><a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-1">Ver más</button></a></p>
                             <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
                             <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
                             <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
@@ -110,6 +85,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                     <div class="info">
                                         <h1><?php echo $lng['index'][3]; ?></h1>
                                         <p><?php echo $lng['index'][4]; ?></p>
+                                        <a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-2">Ver más</button></a>
                                     </div>
                                 </div>
 
@@ -138,6 +114,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                     <div class="info">
                                         <h1><?php echo $lng['index'][3]; ?></h1>
                                         <p><?php echo $lng['index'][4]; ?></p>
+                                        <a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-2">Ver más</button></a>
                                     </div>
                                 </div>
                                 <!-- <div class="d-block d-sm-none">
@@ -159,7 +136,10 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                 </div>
             </div>
         </div>
-        <div class="bg-contacto">
+        <div class="bg-contacto position-relative">
+            <div class="footer-modificado">
+
+            </div>
             <div class="container contacto mt-4">
                 <div class="d-flex justify-content-end align-items-center position-relative">
                     <div class="titulo position-absolute">
@@ -167,7 +147,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         <h1><?php echo $lng['index'][8]; ?></h1>
                     </div>
                     <div class="frmcontacto">
-                        <form action="#">
+                        <form action="#" id="form-contacto">
                             <div class="titulo mb-3">
                                 <div class="d-flex justify-content-center">
                                     <h2><?php echo $lng['index'][7]; ?> <?php echo $lng['index'][8]; ?></h2>
@@ -184,21 +164,6 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                             </div>
                             <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $lng['index'][17]); ?>
                             <p><?php echo $lng['index'][9]; ?></p>
-                            <!-- <div class="form-check">
-                                <div class="row">
-                                    <div class="col-md-8 d-flex align-items-center">
-                                        <div>
-                                            <input class="form-check-input" type="checkbox" name="terminos_condiciones" id="terminos_condiciones" value="option1" required>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                                <p class="mb-0">Acepto politica de privacidad</p>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button type="submit" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6">Enviar</button>
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-md-6">
                                     <div class="form-check pl-0 mb-2 d-flex align-items-center">

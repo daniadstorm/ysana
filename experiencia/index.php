@@ -23,6 +23,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
 <body>
     <?php include_once('../inc/franja_top.inc.php'); ?>
     <?php //include_once('../inc/main_menu.inc.php'); ?>
+    <div class="jumbotronyexperiencia"></div>
     <div class="container-fluid">
         <nav>
             <ol class="breadcrumb bg-white pl-0">
@@ -36,7 +37,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
             </ol>
         </nav>
     </div>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -63,14 +64,17 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+    </div> -->
     <div class="container-fluid">
-        <div class="familias mt-3">
+        <div class="familias mt-3 mb-5">
             <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">NUTRICIÓN</a>
+                <li class="nav-item max-w20">
+                    <a class="nav-link" href="#">Packs experiencias</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">NUTRICIÓN</a>
+                </li> -->
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">ARTICULACIONES</a>
                 </li>
                 <li class="nav-item">
@@ -81,7 +85,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ANSIEDAD</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -108,7 +112,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -136,7 +142,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -164,7 +172,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -192,7 +202,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -220,7 +232,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -248,7 +262,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -276,7 +292,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -304,7 +322,9 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
                                 </div>
                                 <div class="boton">
-                                    <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
+                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
+                                    </a>
                                 </div>
                             </header>
                         </div>
@@ -314,29 +334,43 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
         </div>
     </div>
     <div class="container-fluid footer2">
+        <!-- <div class="d-flex">
+            <div class="d-inline-block">
+                <img src="<?php echo $ruta_inicio; ?>img/sub-footer/1.svg" alt="">
+            </div>
+            <div class="d-inline-block">
+                <img src="<?php echo $ruta_inicio; ?>img/sub-footer/2.svg" alt="">
+            </div>
+            <div class="d-inline-block">
+                <img src="<?php echo $ruta_inicio; ?>img/sub-footer/3.svg" alt="">
+            </div>
+            <div class="d-inline-block">
+                <img src="<?php echo $ruta_inicio; ?>img/sub-footer/4.svg" alt="">
+            </div>
+        </div> -->
         <div class="row">
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
-                    <img class="img-footer2" src="https://png.icons8.com/cotton/64/e74c3c/business-management.png">
-                    <label>Sin gastos de envio</label>
+                    <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/1.svg" height="44">
+                    <!-- <label>Sin gastos de envio</label> -->
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
-                    <img class="img-footer2" src="https://png.icons8.com/cotton/64/e74c3c/business-management.png">
-                    <label>Sin gastos de envio</label>
+                    <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/2.svg" height="44">
+                    <!-- <label>Sin gastos de envio</label> -->
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
-                    <img class="img-footer2" src="https://png.icons8.com/cotton/64/e74c3c/business-management.png">
-                    <label>Sin gastos de envio</label>
+                    <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/3.svg" height="44">
+                    <!-- <label>Sin gastos de envio</label> -->
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
-                    <img class="img-footer2" src="https://png.icons8.com/cotton/64/e74c3c/business-management.png">
-                    <label>Sin gastos de envio</label>
+                    <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/4.svg" height="44">
+                    <!-- <label>Sin gastos de envio</label> -->
                 </div>
             </div>
         </div>

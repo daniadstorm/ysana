@@ -1,6 +1,6 @@
 <?php
 $title = 'Ysana';
-$meta_lang = $lang; //hacer switch con traduccion si necesario (o array)
+$meta_lang = $lang;
 $meta_desc = '';
 $meta_kw = '';
 ?>
@@ -16,7 +16,7 @@ $meta_kw = '';
 <meta name="keywords" content="<?php echo $meta_kw; ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
 <link rel="shortcut icon" href="<?php echo $ruta_archivos; ?>img/favicon/favicon.ico" />
 
@@ -49,3 +49,6 @@ $meta_kw = '';
 <title><?php echo $title; ?></title>
 
 </head>
+
+<?php
+?>

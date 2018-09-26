@@ -13,7 +13,36 @@ $lista_farmacias = array(
     array('nombre'=>'Dani','calle'=>'C/ cantabria')
 );
 
+$titulo = '';
+$cabecera = '';
+$seo_url = '';
+$get_seo_url = (isset($_GET['producto'])) ? $_GET['producto'] : '';
 
+if($get_seo_url!=''){
+    $get_seo_url = explode('/',$get_seo_url);
+    $seo_url = $get_seo_url[0];
+}
+
+/* echo '<pre>'; */
+$encontrado = false;
+$cp = 0;
+while(!$encontrado && $cp<count($productos_ysana)){
+    $fin = false;
+    $cont_prod = 0;
+    while(!$fin && $cont_prod<count($productos_ysana[$cp]['productos_categoria'])){
+        if($productos_ysana[$cp]['productos_categoria'][$cont_prod]['url-seo']==$seo_url){
+            $fin=true;
+            $encontrado=true;
+            $titulo = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['nombre'];
+            $cabecera = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['cabecera'];
+        }
+        /* print_r($productos_ysana[$cp]['productos_categoria'][$cont_prod]); */
+        /* echo $productos_ysana[$cp]['productos_categoria'][$cont_prod]['nombre'].'-'.$cont_prod.'-'.count($productos_ysana[$cp]['productos_categoria']).'<hr>'; */
+        $cont_prod++;
+    }
+    $cp++;
+}
+/* echo '</pre>'; */
 //GET___________________________________________________________________________
 
 //GET___________________________________________________________________________
@@ -34,12 +63,18 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
 
     <?php //include_once('inc/footer.inc.php'); ?>
     <main id="content" role="main">
-        <h1><?php echo $lng['ttl_idioma']; ?></h1>
+        
+        <div class="position-relative">
+            <div class="videoysana">
+                <video class="video-inline" autoplay loop muted src="<?php echo $ruta_inicio; ?>img/videofinal.mp4"></video>
+            </div>
+        </div>
         <div class="container-fluid">
             <nav class="d-none d-sm-block">
                 <ol class="breadcrumb bg-white pl-0">
                     <li class="breadcrumb-item">
                         <a href="#">Ysana</a>
+                        <!-- <a href="#"><?php echo $seo_url[0]; ?></a> -->
                     </li>
                     <li class="breadcrumb-item">
                         <a href="#">Home</a>
@@ -51,36 +86,15 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                 </ol>
             </nav>
         </div>
-        <div class="contenedor">
-            <div id="carouselindicador" class="carousel slide" data-ride="carousel">
-                <!-- <ol class="carousel-indicators">
-                    <li data-target="#carouselindicador" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselindicador" data-slide-to="1"></li>
-                    <li data-target="#carouselindicador" data-slide-to="2"></li>
-                </ol> -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="First slide">
-                    </div>
-                    <!-- <div class="carousel-item">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="http://recasens.com/wp-content/uploads/2017/02/r_095_pvc_1.jpg" alt="Third slide">
-                    </div> -->
-                </div>
-                <!-- <a class="carousel-control-prev" href="#carouselindicador" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselindicador" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a> -->
+        <div class="container">
+            <div class="max-w-producto m-auto">
+                <h1>
+                    <?php echo $titulo; ?>
+                </h1>
             </div>
         </div>
         <div class="container">
-        <div class="d-flex flex-column align-items-center mt-5">
+            <div class="d-flex flex-column align-items-center mt-5">
                 <h1>Elige el tuyo</h1>
                 <p class="mb-1">Puedes elegir entre nuestro pack o escoger recibirlo en tu farmacia más cercana</p>
                 <div class="liniacategoria"></div>

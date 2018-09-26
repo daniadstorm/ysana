@@ -54,8 +54,8 @@ switch ($lang) {
     case 'cat':         include_once(DOCUMENT_ROOT.'lang/lang.cat.php');    break;
     case 'fra':         include_once(DOCUMENT_ROOT.'lang/lang.fra.php');    break;
 }
-echo '<pre>';
+/* echo '<pre>';
 print_r($_REQUEST);
-echo '</pre>';
+echo '</pre>'; */
 //====================================================================================
 ?>
