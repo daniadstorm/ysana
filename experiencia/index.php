@@ -21,9 +21,13 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
 </script>
 
 <body>
-    <?php include_once('../inc/franja_top.inc.php'); ?>
+    <?php //include_once('../inc/franja_top.inc.php'); ?>
     <?php //include_once('../inc/main_menu.inc.php'); ?>
-    <div class="jumbotronyexperiencia"></div>
+
+    <?php include_once('../inc/panel_top_experiencia.inc.php'); ?>
+    <?php include_once('../inc/navbar_inicio_experiencia.inc.php'); ?>
+
+    <div class="jumbotronyexperiencia jumbotronpersonalizado"></div>
     <div class="container-fluid">
         <nav>
             <ol class="breadcrumb bg-white pl-0">
@@ -90,247 +94,54 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row articulos">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
+        <div class="row articulos mt-4">
+        <?php
+            $cat_encontrado=false;
+            $cat_count = 0;
+            $categoria = "Pack experiencias";
+            while(!$cat_encontrado && $cat_count<count($productos_ysana_experiencia)){
+                if(strtolower($productos_ysana_experiencia[$cat_count]['nombre_categoria'])==strtolower($categoria)){
+                    foreach($productos_ysana_experiencia[$cat_count]['productos_categoria'] as $clave => $valor){
+                        /* print_r($valor); */
+                        if($valor['activo']==ACTIVADO){
+                            echo '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
+                            <article class="tarjeta-articulo">
+                                <div class="tarjeta-articulo_elementos-basicos">
+                                    <div class="tarjeta-articulo_foto">
+                                        <img src="'.$ruta_inicio.'img/productosexp/'.$valor['img-portada'].'" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tarjeta-articulo_adicional d-flex flex-column">
+                                        <header class="tarjeta-articulo_info">
+                                            <h3 class="categoria">Ysana®</h3>
+                                            <h3 class="nombre">'.$valor['nombre'].'</h3>
+                                            <h3 class="precio">'.$valor['precio'].'</h3>
+                                        </header>
+                                        <header class="tarjeta-articulo_extras">
+                                            <div class="puntuacion">
+                                                <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
+                                                <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
+                                                <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
+                                                <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
+                                                <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
+                                            </div>
+                                            <div class="boton">
+                                            <a href="'.$valor['url-seo'].'">
+                                                <button type="button" class="btn btn-comprar btn-sm">'.$lng['experiencia-index'][0].'</button>
+                                            </a>    
+                                            </div>
+                                        </header>
+                                    </div>
                                 </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">AdelgaYSana</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
-                <article class="tarjeta-articulo">
-                    <div class="tarjeta-articulo_elementos-basicos">
-                        <div class="tarjeta-articulo_foto">
-                            <img src="https://ysana.es/img/04-adelgaysana.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="tarjeta-articulo_adicional d-flex flex-column">
-                            <header class="tarjeta-articulo_info">
-                                <h3 class="categoria">Ysana</h3>
-                                <h3 class="nombre">Eficaps</h3>
-                                <h3 class="precio">19,90€</h3>
-                            </header>
-                            <header class="tarjeta-articulo_extras">
-                                <div class="puntuacion">
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star-color.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                    <?php echo '<img class="img-start" src="'.$ruta_archivos.'img/star.png">'; ?>
-                                </div>
-                                <div class="boton">
-                                    <a href="<?php echo $ruta_inicio; ?>experiencia/producto.php">
-                                        <button type="button" class="btn btn-comprar btn-sm"><?php echo $lng['experiencia-index'][0]; ?></button>
-                                    </a>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </article>
-            </div>
+                            </article>
+                        </div>';
+                        }
+                        
+                    }
+                }
+                $cat_count++;
+            }
+           
+            ?>
         </div>
     </div>
     <div class="container-fluid footer2">

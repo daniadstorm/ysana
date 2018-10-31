@@ -9,7 +9,7 @@
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse mt-auto ml-3" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse mt-auto" id="navbarSupportedContent">
                 <!-- <form id="frmbuscar" class="form-inline mt-2 my-lg-0 ml-auto mr-4">
                     <input class="form-control mr-sm-2" type="search" placeholder="Busca tu producto" aria-label="Busca tu producto">
                     <img name="search" src="https://png.icons8.com/ios/64/000000/search.png">
@@ -17,7 +17,7 @@
                 <ul id="nav_inicio" class="navbar-nav ml-auto">
                     <li class="nav-item text-right">
                         <form id="frmbuscar" class="form-inline-block mt-2 my-lg-0 ml-auto">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Busca tu producto Ysana" aria-label="Busca tu producto">
+                            <input class="form-control mr-sm-2" type="search" placeholder="<?php echo $lng['navbar_inicio'][5]; ?>" aria-label="Busca tu producto">
                             <img name="search" src="https://png.icons8.com/ios/64/000000/search.png">
                         </form>
                     </li>
@@ -31,16 +31,16 @@
                         <a class="nav-link text-color-2" href="<?php echo $ruta_inicio; ?>directo_farmacia"><?php echo $lng['navbar_inicio'][2]; ?></a>
                     </li>
                     <li class="nav-item text-right">
-                        <a class="nav-link pt-0 mt-0" href="<?php echo $ruta_inicio; ?>clubysana.php">
+                        <a class="nav-link pt-0 mt-0" href="<?php echo $ruta_inicio; ?>club_ysana">
                             <img src="<?php echo $ruta_inicio; ?>img/svg/clubysana.svg" height="32px" alt="">
                         </a>
                     </li>
                     <li class="nav-item <?php echo ($activePage=='') ? 'active':''; ?> text-right">
-                        <a class="nav-link" href="#form-contacto"><?php echo $lng['navbar_inicio'][3]; ?></a>
+                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>#form-contacto"><?php echo $lng['navbar_inicio'][3]; ?></a>
                     </li>
-                    <li class="nav-item d-block d-sm-none text-right">
+                    <!-- <li class="nav-item d-block d-sm-none text-right">
                         <p class="m-0 bienvenidosx"><?php echo $lng['navbar_inicio'][4]; ?></p>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>

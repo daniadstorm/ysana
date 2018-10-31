@@ -46,10 +46,10 @@ if(!isset($_SESSION)) session_start();
 //lng = array de textos
 /* if (isset($_POST['idioma_seleccionado'])) $_SESSION['lang'] = $_POST['idioma_seleccionado']; */
 if (isset($_REQUEST['idioma_seleccionado'])) $_SESSION['lang'] = $_REQUEST['idioma_seleccionado'];
-$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'cast';
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'spa';
 switch ($lang) {
     default:
-    case 'cast':        include_once(DOCUMENT_ROOT.'lang/lang.cast.php');   break; //por defecto cast
+    case 'spa':        include_once(DOCUMENT_ROOT.'lang/lang.spa.php');   break; //por defecto spa
     case 'eng':         include_once(DOCUMENT_ROOT.'lang/lang.eng.php');    break; 
     case 'cat':         include_once(DOCUMENT_ROOT.'lang/lang.cat.php');    break;
     case 'fra':         include_once(DOCUMENT_ROOT.'lang/lang.fra.php');    break;

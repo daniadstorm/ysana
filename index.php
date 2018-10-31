@@ -4,6 +4,7 @@ include_once('config/config.inc.php'); //cargando archivo de configuracion
 $uM = load_model('usuario'); //uM userModel
 $hM = load_model('html');
 $iM = load_model('inputs');
+$sM = load_model('seo');
 $frm_nombre = '';
 $frm_email = '';
 $frm_direccion = '';
@@ -22,6 +23,7 @@ $terminos_condiciones = '';
 //POST__________________________________________________________________________
 
 include_once('inc/cabecera.inc.php'); //cargando cabecera
+echo $sM->add_cabecera("Complementos para una vida sana - Ysana marca de confianza"); 
 ?>
 <script type="text/javascript">
 
@@ -34,7 +36,12 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
     <?php //include_once('inc/footer.inc.php'); ?>
     <main id="content" role="main">
         <div class="contenedor">
-        <div class="jumbotronysana"></div>
+        <!-- <div class="jumbotronysana"></div> -->
+        <div class="position-relative">
+            <div class="videoysana">
+                <video class="video-inline" autoplay loop muted src="<?php echo $ruta_inicio; ?>img/nature2.mp4"></video>
+            </div>
+        </div>
         </div>
         <div class="contquiensomos">
             <div class="container">
@@ -49,7 +56,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                     <div class="info qs bg-white">
                         <div class="contenido pb-3">
                             <p><?php echo $lng['index'][1]; ?></p>
-                            <p><a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-1">Ver más</button></a></p>
+                            <p><a href="<?php echo $ruta_inicio; ?>quien-es-ysana-vida-sana"><button type="button" class="btn btn-sm btn-leer-mas mt-1">Ver más</button></a></p>
                             <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
                             <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
                             <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
@@ -60,21 +67,21 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
             </div>
         </div>
         <div class="clubysana">
-            <div class="info d-flex justify-content-center align-items-center">
-                <div class="contenido m-3">
-                    <img class="img-ysanaclub img-fluid" src="<?php echo $ruta_inicio; ?>img/ysanaclubbl.png" alt="">
+            <a href="<?php echo $ruta_inicio; ?>club_ysana">
+            <div class="info-homee d-flex justify-content-center align-items-center h-100">
+                <img class="img-ysanaclub img-fluid" src="<?php echo $ruta_inicio; ?>img/home-clubysana.svg" alt="">
+                <!-- <div class="contenido m-3"> -->
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus. Aenean
                         efficitur nisi at fringilla molestie. Nunc varius, ipsum a iaculis interdum, sem dui blandit ligula,
                         vitae egestas arcu tortor finibus lectus.</p> -->
-                </div>
-            </div>
+                <!-- </div> -->
+            </div></a>
         </div>
-        <div class="container">
+        <!--<div class="container">
             <div class="novedades text-center">
                 <div class="titulo my-5">
                     <h2><?php echo $lng['index'][2]; ?></h2>
                 </div>
-                <!-- d-flex flex-row justify-content-center mt-4 -->
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-6">
@@ -90,13 +97,6 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                 </div>
 
                             </div>
-                            <!-- <div class="d-block d-sm-none">
-                                    <div class="infoxs">
-                                        <h1>AdelgaYsana Forte</h1>
-                                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
-                                            a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
-                                    </div>
-                                </div> -->
                         </div>
                         <div class="d-block d-sm-none">
                             <div class="infoxs">
@@ -117,13 +117,6 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                         <a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-2">Ver más</button></a>
                                     </div>
                                 </div>
-                                <!-- <div class="d-block d-sm-none">
-                                    <div class="infoxs">
-                                        <h1>AdelgaYsana Forte</h1>
-                                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien
-                                            a dapibus. Aenean efficitur nisi at fringilla molestie.</p>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <div class="d-block d-sm-none">
@@ -135,7 +128,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="bg-contacto position-relative">
             <div class="footer-modificado">
 
@@ -147,7 +140,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                         <h1><?php echo $lng['index'][8]; ?></h1>
                     </div>
                     <div class="frmcontacto">
-                        <form action="#" id="form-contacto">
+                        <form action="mailto:lalvarado@pharmalink.es" id="form-contacto">
                             <div class="titulo mb-3">
                                 <div class="d-flex justify-content-center">
                                     <h2><?php echo $lng['index'][7]; ?> <?php echo $lng['index'][8]; ?></h2>
@@ -189,5 +182,30 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
         <?php include_once('inc/footer.inc.php'); ?>
     </main>
 </body>
-
+<script>
+    $('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+    if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });
+</script>
 </html>

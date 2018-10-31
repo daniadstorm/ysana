@@ -42,6 +42,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
             </div>
         </div>
         <div id="coming-soon-derecha" class="derecha d-flex justify-content-center align-items-center">
+                <!-- <img src="<?php echo $ruta_inicio; ?>img/Pronto-en-ysana-club-ysana-.svg" class="w-100" alt=""> -->
             <div class="info d-flex justify-content-center align-items-center">
                 <div class="contenido m-3 text-center">
                     <h1 class="titulo-comingsoon">COMING SOON</h1>

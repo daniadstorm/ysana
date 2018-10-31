@@ -277,6 +277,17 @@ class usuarioModel extends Model {
             else return false;
     }
 
+    function get_combo_idioma($arr, $id, $selected=false, $class=false, $onChange=false) {
+        $o  = '';
+        $o .= '<select id="'.$id.'" name="'.$id.'" class="" ';
+        if ($class) $o .= ' class ="'.$class.'" ';
+        (!$onChange) ? $o .= '>' : $o .= 'onchange="this.form.submit()">';
+        //$o .= '>';
+        foreach ($arr as $key => $val) $o .= '<option '.(($selected == $key) ? ' selected="selected" ' : '').' value="'.$key.'">'.$val.'</option>';
+        $o .= '</select>';
+        return $o;
+    }
+
     function get_combo_array($arr, $id, $selected=false, $class=false, $onChange=false) {
         $o  = '';
         $o .= '<select id="'.$id.'" name="'.$id.'" class="form-control" ';

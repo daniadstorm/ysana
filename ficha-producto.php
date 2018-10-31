@@ -15,6 +15,8 @@ $lista_farmacias = array(
 
 $titulo = '';
 $cabecera = '';
+$h1 = '';
+$descripcion = '';
 $seo_url = '';
 $get_seo_url = (isset($_GET['producto'])) ? $_GET['producto'] : '';
 
@@ -35,6 +37,8 @@ while(!$encontrado && $cp<count($productos_ysana)){
             $encontrado=true;
             $titulo = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['nombre'];
             $cabecera = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['cabecera'];
+            $h1 = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['h1'];
+            $descripcion = $productos_ysana[$cp]['productos_categoria'][$cont_prod]['descripcion'];
         }
         /* print_r($productos_ysana[$cp]['productos_categoria'][$cont_prod]); */
         /* echo $productos_ysana[$cp]['productos_categoria'][$cont_prod]['nombre'].'-'.$cont_prod.'-'.count($productos_ysana[$cp]['productos_categoria']).'<hr>'; */
@@ -91,12 +95,18 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                 <h1>
                     <?php echo $titulo; ?>
                 </h1>
+                <h1>
+                <?php echo $h1; ?>
+                </h1>
+                <p>
+                    <?php echo $descripcion; ?>
+                </p>
             </div>
         </div>
         <div class="container">
             <div class="d-flex flex-column align-items-center mt-5">
-                <h1>Elige el tuyo</h1>
-                <p class="mb-1">Puedes elegir entre nuestro pack o escoger recibirlo en tu farmacia más cercana</p>
+                <h1><?php echo $lng['productos_ysana'][0]; ?></h1>
+                <p class="mb-1"><?php echo $lng['productos_ysana'][1]; ?></p>
                 <div class="liniacategoria"></div>
             </div>
         </div>
@@ -108,9 +118,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                             <div class="imagen">
                                 <img src="<?php echo $ruta_inicio; ?>img/svg/experiencia.png" alt="" class="img-fluid">
                             </div>
-                            <p class="ficha_producto-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt culpa enim, commodi perspiciatis
-                                labore qui cumque soluta id, ducimus, explicabo eveniet omnis ab dolorem earum reiciendis
-                                deleniti itaque recusandae beatae!</p>
+                            <p class="ficha_producto-desc"><?php echo $lng['productos_ysana'][2]; ?></p>
                             <button type="button" class="btn btn-comprar btn-sm ficha_producto-btn_compra">EXPERIENCIA</button>
                         </div>
                     </div>
@@ -121,9 +129,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                             <div class="imagen">
                                 <img src="<?php echo $ruta_inicio; ?>img/svg/farmacia.png" alt="" class="img-fluid">
                             </div>
-                            <p class="ficha_producto-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt culpa enim, commodi perspiciatis
-                                labore qui cumque soluta id, ducimus, explicabo eveniet omnis ab dolorem earum reiciendis
-                                deleniti itaque recusandae beatae!</p>
+                            <p class="ficha_producto-desc"><?php echo $lng['productos_ysana'][3]; ?></p>
                             <button type="button" class="btn btn-comprar btn-sm ficha_producto-btn_compra">FARMACIA DIRECTA</button>
                         </div>
                     </div>

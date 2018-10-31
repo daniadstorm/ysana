@@ -6,20 +6,16 @@ $aM = load_model('articulos');
 $iM = load_model('inputs');
 
 $id_usuario = '';
+$id_producto = '';
 $id_articulo = 0;
-$nombre = 'Experiencia';
-$descripcion = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel dapibus lorem. Vestibulum cursus libero ac ante viverra, sed ultrices turpis lobortis.';
-$precio = '19,95';
-$nombre_categoria = array('Ysana');
-$usos_producto = array(
-    array('titulo'=>'Titulo','des'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo quam, id aliquet sem. Cras interdum sed elit quis malesuada. Vivamus mauris enim, fermentum ut tempor nec, ultrices ac nisi. Vestibulum facilisis, sapien ut faucibus elementum, nibh enim vestibulum orci, sed auctor ante enim eget tortor. Ut vel faucibus est, quis dictum arcu. Etiam eu justo quis felis ornare mattis. Nulla facilisi.'),
-    array('titulo'=>'Titulo','des'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo quam, id aliquet sem. Cras interdum sed elit quis malesuada. Vivamus mauris enim, fermentum ut tempor nec, ultrices ac nisi. Vestibulum facilisis, sapien ut faucibus elementum, nibh enim vestibulum orci, sed auctor ante enim eget tortor. Ut vel faucibus est, quis dictum arcu. Etiam eu justo quis felis ornare mattis. Nulla facilisi.')
-);
-/* array_push($usos_producto,array('titulo'=>$fgua['titulo'],'des'=>$fgua['descripcion'])); */
-$info_producto = array(
-    array('titulo'=>'Instrucción','des'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo quam, id aliquet sem. Cras interdum sed elit quis malesuada. Vivamus mauris enim, fermentum ut tempor nec, ultrices ac nisi. Vestibulum facilisis, sapien ut faucibus elementum, nibh enim vestibulum orci, sed auctor ante enim eget tortor. Ut vel faucibus est, quis dictum arcu. Etiam eu justo quis felis ornare mattis. Nulla facilisi. Etiam arcu diam, feugiat aliquam iaculis et, scelerisque a est. Donec nisi leo, cursus vitae purus nec, ultrices fermentum quam. Praesent porttitor, lectus et cursus dapibus, mauris tortor congue velit, vel porttitor elit lorem et nisi. Etiam est turpis, accumsan id vulputate ac, elementum eget ex.'),
-    array('titulo'=>'Efectos Secundarios','des'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo quam, id aliquet sem. Cras interdum sed elit quis malesuada. Vivamus mauris enim, fermentum ut tempor nec, ultrices ac nisi. Vestibulum facilisis, sapien ut faucibus elementum, nibh enim vestibulum orci, sed auctor ante enim eget tortor.')
-);
+$nombre = 'N/A';
+$nombre_categoria = 'N/A';
+$usos_prod = array();
+$info_producto = array();
+$descripcion = 'N/A';
+$stock=0;
+$precio = 'N/A';
+
 $consejo_producto = array(
     array('titulo'=>'Titulo','des'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo quam, id aliquet sem. Cras interdum sed elit quis malesuada. Vivamus mauris enim, fermentum ut tempor nec, ultrices ac nisi. Vestibulum facilisis, sapien ut faucibus elementum, nibh enim vestibulum orci, sed auctor ante enim eget tortor. Ut vel faucibus est, quis dictum arcu. Etiam eu justo quis felis ornare mattis. Nulla facilisi. Etiam arcu diam, feugiat aliquam iaculis et, scelerisque a est. Donec nisi leo, cursus vitae purus nec, ultrices fermentum quam.')
 );
@@ -33,19 +29,40 @@ $valoracion_producto = array(
     array('titulo'=>'Pregunta lorem ipsuuuum','des'=>'Respuesta a lorem ipsuuuuuuuuuuum.','puntuacion'=>7,'fecha_valoracion'=>'20-08-2018','nombre_usuario'=>'Dani','apellidos_usuario'=>'AdStorm'),
     array('titulo'=>'Pregunta lorem ipsuuuum','des'=>'Respuesta a lorem ipsuuuuuuuuuuum.','puntuacion'=>3,'fecha_valoracion'=>'20-08-2018','nombre_usuario'=>'Sergio','apellidos_usuario'=>'AdStorm')
 );
+
 $imgs_producto = array();
 $cantidad_productos = array('1','2','3','4','5','6');
-$total_stock = 0;
-$stock=0;
 $count_valoracion_producto = 4;
 $total_valoracion_producto = 7;
 //GET__________________________________________________________________________
 (isset($_GET['id_articulo'])) ? $id_articulo=$_GET['id_articulo'] : '';
+$id_producto = (isset($_GET['id'])) ? $_GET['id'] : '';
 
 //GET__________________________________________________________________________
 
 //LISTADO______________________________________________________________________
-
+$encontrado = false;
+$cont_prod = 0;
+$cont_prod_cat = 0;
+//echo '<h1>'.count($productos_ysana_df).'</h1>';
+while(!$encontrado && $cont_prod<count($productos_ysana_df)){
+    //echo '<h1>'.$productos_ysana_df[$cont_prod]['nombre_categoria'].'</h1>';
+    while(!$encontrado && $cont_prod_cat<count($productos_ysana_df[$cont_prod]['productos_categoria'])){
+        if($id_producto==$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['url-seo']){
+            $encontrado=true;
+            $nombre=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['nombre'];
+            $nombre_categoria=$productos_ysana_df[$cont_prod]['nombre_categoria'];
+            $usos_prod=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['usos'];
+            $descripcion=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['descripcion'];
+            $stock=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['stock'];
+            $precio=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['precio'];
+            $info_producto=$productos_ysana_df[$cont_prod]['productos_categoria'][$cont_prod_cat]['informacion'];
+        }
+        $cont_prod_cat++;
+    }
+    $cont_prod_cat=0;
+    $cont_prod++;
+}
 //LISTADO______________________________________________________________________
 include_once('../inc/cabecera.inc.php'); //cargando cabecera 
 ?>
@@ -53,8 +70,10 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
 </script>
 
 <body>
-    <?php include_once('../inc/franja_top.inc.php'); ?>
-    <?php include_once('../inc/main_menu.inc.php'); ?>
+    <?php //include_once('../inc/franja_top.inc.php'); ?>
+    <?php //include_once('../inc/main_menu.inc.php'); ?>
+    <?php include_once('../inc/panel_top_experiencia.inc.php'); ?>
+    <?php include_once('../inc/navbar_inicio_experiencia.inc.php'); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -92,10 +111,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                         </div>
                         <div class="info col-md-6 col-lg-5">
                             <p class="pb-0 mb-0 text-color-3">
-                                <?php foreach($nombre_categoria as $valor){
-                                if($valor!=end($nombre_categoria)) echo $valor.', ';
-                                    else echo $valor;
-                            } ?>
+                                <?php echo $nombre_categoria; ?>
                             </p>
                             <h3>
                                 <?php echo $nombre; ?>
@@ -112,7 +128,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             <p>
                                 <?php
                                 for($i=1;$i<=5;$i++){
-                                    echo ($i<=($total_valoracion_producto/2)) ? '<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star-color.png">':'<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star.png">';
+                                    echo ($i<=($total_valoracion_producto/2)) ? '<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star-color.png">':'<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star-color.png">';
                                 }
                                 ?>
                             </p>
@@ -130,7 +146,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             <h1 class="display-4 mt-3">
                                 <?php echo $precio.' €'; ?>
                             </h1>
-                            <p>información adicional</p>
+                            <!-- <p>información adicional</p> -->
                             <form action="articulo.php" method="post">
                                 <button class="btn btn-lg btn-color-5 mb-2 w-100">Comprar Ahora</button>
                                 <button class="btn btn-lg btn-cesta mb-2 w-100">Añadir a la Cesta</button>
@@ -173,18 +189,17 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             <a class="nav-item nav-link active" id="nav-usos-tab" data-toggle="tab" href="#nav-usos" role="tab" aria-controls="nav-usos"
                                 aria-selected="true">Usos</a>
                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                aria-selected="false">Información Nutricional</a>
+                                aria-selected="false">Información Adicional</a>
                             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
                                 aria-selected="false">Valoraciones</a>
                         </div>
                     </nav>
                     <div class="tab-content mt-4" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-usos" role="tabpanel" aria-labelledby="nav-usos-tab">
-                            <?php foreach($usos_producto as $valor){
-                                echo '<div class="uso ml-2">
-                                <h6>'.$valor['titulo'].'</h6>
-                                <p>'.$valor['des'].'</p>
-                                </div>';
+                            <?php foreach($usos_prod as $valor){
+                                echo '<div class="uso ml-2">';
+                                echo '<'.$valor['etiqueta'].'>'.$valor['contenido'].'</'.$valor['etiqueta'].'>';
+                                echo '</div>';
                             }?>
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -193,39 +208,45 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                     <h5 class="text-center mt-2">Información Producto</h5>
                                     <div class="mt-3 w-100">
                                         <?php foreach($info_producto as $valor){
-                                        echo '<div class="info mb-4">
-                                        <h5 class="text-left">'.$valor['titulo'].'</h5>
-                                        <p>'.$valor['des'].'</p>
-                                        </div>';
+                                        echo '<div class="uso ml-2">';
+                                        echo '<'.$valor['etiqueta'].'>'.$valor['contenido'].'</'.$valor['etiqueta'].'>';
+                                        echo '</div>';
                                     }?>
                                     </div>
                                 </div>
                                 <div class="col-md-6 pb-3">
                                     <!-- bg-grayopacity-ysana -->
-                                    <div>
-                                        <h5 class="text-center mt-2">Consejo Farmacéutico</h5>
-                                        <div class="mt-3">
-                                            <?php foreach($consejo_producto as $valor){
-                                            echo '<div class="info mb-4 bg-white mx-2 p-3">
-                                            <h6>'.$valor['titulo'].'</h6>
-                                            <p>'.$valor['des'].'</p>
-                                            </div>';
-                                        }?>
+                                    <div class="no-blur-consejo">
+                                        <div class="nb-pers">
+                                            <h1>Para poder ver este contenido debes de loguearte en ClubYsana</h1>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h5 class="text-center mt-2">Preguntas</h5>
-                                        <div class="mt-3">
-                                            <?php foreach(array_slice($preguntas_producto, 0, 2) as $valor){
-                                            echo '<div class="info mb-4 bg-white mx-2 p-3">
-                                            <h6>'.$valor['titulo'].'</h6>
-                                            <p class="mb-0">'.$valor['des'].'</p>';
-                                            for($i=1;$i<=5;$i++){
-                                                echo ($i<=($valor['puntuacion']/2)) ? '<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star-color.png">':'<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star.png">';
-                                            }
-                                            echo '<p class="o-50 mb-0 mt-1">'.$valor['fecha_valoracion'].' | Opinión de '.$valor['nombre_usuario'].' '.$valor['apellidos_usuario'].'</p>
-                                            </div>';
-                                        }?>
+                                    <div class="blur-consejos no_seleccion">
+                                        <div>
+                                            <h5 class="text-center mt-2">Consejo Farmacéutico</h5>
+                                            <div class="mt-3">
+                                                <?php foreach($consejo_producto as $valor){
+                                                echo '<div class="info mb-4 bg-white mx-2 p-3">
+                                                <h6>'.$valor['titulo'].'</h6>
+                                                <p>'.$valor['des'].'</p>
+                                                </div>';
+                                                }?>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-center mt-2">Preguntas</h5>
+                                            <div class="mt-3">
+                                                <?php foreach(array_slice($preguntas_producto, 0, 2) as $valor){
+                                                echo '<div class="info mb-4 bg-white mx-2 p-3">
+                                                <h6>'.$valor['titulo'].'</h6>
+                                                <p class="mb-0">'.$valor['des'].'</p>';
+                                                for($i=1;$i<=5;$i++){
+                                                    echo ($i<=($valor['puntuacion']/2)) ? '<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star-color.png">':'<img class="img-start-puntuacion-16" src="'.$ruta_archivos.'img/star.png">';
+                                                }
+                                                echo '<p class="o-50 mb-0 mt-1">'.$valor['fecha_valoracion'].' | Opinión de '.$valor['nombre_usuario'].' '.$valor['apellidos_usuario'].'</p>
+                                                </div>';
+                                            }?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -235,10 +256,15 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mt-3">
+                                    <div class="no-blur-consejo">
+                                        <div class="nb-pers">
+                                            <h1>Para poder ver este contenido debes de loguearte en ClubYsana</h1>
+                                        </div>
+                                    </div>
                                         <h5 class="o-50">
                                             <?php echo $count_valoracion_producto; ?> Valoraciones</h5>
                                         <?php foreach($valoracion_producto as $valor){
-                                        echo '<div class="valoracion mb-4 p-3 row">
+                                        echo '<div class="valoracion blur-x5  mb-4 p-3 row">
                                         <div class="col-md-2 m-0 px-0 d-flex align-items-center flex-column">
                                             <div class="estrellas">';
                                         for($i=1;$i<=5;$i++){

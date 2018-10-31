@@ -44,9 +44,15 @@ p{
 .bg-transparent{
     background-color: transparent;
 }
+.bg-naranja-ysana{
+    background-color: #f39400;
+}
 .btn-color-5{
     border-color: #f39400;
     background-color: #f39400;
+}
+.bg-color-6{
+    background-color: var(--ysana-color-6);
 }
 .btn-color-6{
     background-color: var(--ysana-color-6);
@@ -60,6 +66,14 @@ p{
 .btn-cesta{
     background-color: transparent;
     border: 2px solid #000;
+}
+#idioma_seleccionado{
+    background-color: transparent;
+    border: 0px;
+    color: white;
+}
+#idioma_seleccionado option{
+    color: #000;
 }
 .btn-lg{
     border-radius: 2px;
@@ -140,7 +154,7 @@ div.familias ul li a.nav-link{
 }
 .tarjeta-articulo{
     width: 100%;
-    background-color: rgb(230, 230, 230);
+    /* background-color: rgb(230, 230, 230); */
     box-shadow: 4px 4px 4px -1px #d4d4d4;
     /* max-width: 170px; */
 }
@@ -307,7 +321,7 @@ div.clubysana div.info div.contenido{
     max-width: 600px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 3px 3px 6px -1px #00000059;
+    /* box-shadow: 3px 3px 6px -1px #00000059; */
     position: relative;    
 }
 div.info div.contenido p{
@@ -324,8 +338,20 @@ div.info div.contenido p{
     background-color: #e6007e;
     min-height: 300px;
 }
+.acordeonxd{
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 .clubysana .info{
     height: 100%;
+}
+.clubysana .info-home{
+    height: 100%;
+    background-image: url(../img/home-clubysana.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .coming-soon{
     display: flex;
@@ -550,7 +576,9 @@ div.infoxs p {
     font-weight: normal;
 }
 .img-ysanaclub{
-    max-height: 200px;
+    /* max-height: 200px; */
+    min-height: 200px;
+    box-shadow: 3px 4px 24px -1px #0000008a;
 }
 .foto-carrito{
     max-width: 87px;
@@ -854,7 +882,7 @@ div[class*="menu_"] div ul p {
 }
 .jumbotronysana {
     max-height: 500px;
-    /* background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg); */
+    /* background: url(../img/slider_principal1.jpg); */
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
@@ -865,12 +893,39 @@ div[class*="menu_"] div ul p {
     width: 100%;
     text-align: center;
 }
+
 /* .jumbotronysana{
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/slider_principal1.jpg);
 } */
 .jumbotronyexperiencia{
     max-height: 500px;
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/cabecera-experiencias-adelgaysana-forte.png);
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+.jumbotronquienessomos{
+    max-height: 500px;
+    background: url(../img/cabecera-ysana-quienessomos_INGREDIENTES.jpg);
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+.jumbotronprensa{
+    max-height: 500px;
+    background: url(../img/slider_principal1.jpg);
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
@@ -915,6 +970,87 @@ div[class*="menu_"] div ul p {
 .breadcrumb-item+.breadcrumb-item::before{
 content: "|";
 }
+.no-blur-consejo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+}
+.nb-pers {
+    width: 90%;
+    text-align: center;
+}
+.blur-x5{
+    filter: blur(5px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+.blur-consejos{
+    filter: blur(5px);
+    z-index: 10;
+}
+.no_seleccion{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+nav.navqs{
+    
+}
+nav.navqs ul{
+    list-style-type: none;
+    display: table;
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav.navqs ul li{
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    border-left: 1px solid white;
+}
+nav.navqs ul li a{
+    display: block;
+    padding: 0rem;
+    color: white;
+}
+nav.navqs ul li a:hover{
+    text-decoration: none;
+}
+.titulo-qs{
+    border-bottom: 4px solid var(--ysana-color-6);
+}
+div.qs-img{
+    max-width: 180px;
+    display: inline-block;
+}
+div.img-cq{
+    max-width: 180px;
+    display: inline-block;
+}
+div.centrar-div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.wd-qs{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3>a.text-light:hover{
+    text-decoration: none;
+}
 /* .max-w-producto{
     width: 90%;
 } */
@@ -950,7 +1086,7 @@ content: "|";
         font-size: 1.2rem;
     }
     .jumbotronysana{
-        background: url(http://192.168.1.2/ysana/img/slider_principal_resp.jpg);
+        background: url(../img/slider_principal_resp.jpg);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -958,6 +1094,14 @@ content: "|";
         background-repeat: no-repeat;
         background-position: center;
         height: 280px;
+    }
+    .jumbotronpersonalizado{
+        max-height: 300px !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        height: 300px !important;
     }
 }
 
@@ -978,14 +1122,22 @@ content: "|";
         font-size: 1.2rem;
     }
     .jumbotronysana{
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/slider_principal1.jpg);
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-}
+    }
+    .jumbotronpersonalizado{
+        max-height: 300px !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        height: 300px !important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1011,14 +1163,22 @@ content: "|";
         font-size: 1.3rem;
     }
     .jumbotronysana{
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/slider_principal1.jpg);
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-}
+    }
+    .jumbotronpersonalizado{
+        max-height: 300px !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        height: 300px !important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -1041,7 +1201,7 @@ content: "|";
         font-size: 1.7rem;
     }
     .jumbotronysana{
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/slider_principal1.jpg);
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
@@ -1074,7 +1234,7 @@ content: "|";
         font-size: 2.1rem;
     }
     .jumbotronysana{
-    background: url(http://192.168.1.2/ysana/img/slider_principal1.jpg);
+    background: url(../img/slider_principal1.jpg);
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;

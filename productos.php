@@ -38,7 +38,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                 <h1 class="h1-mbl">
                     <?php echo $lng['productos'][0]; ?>
                 </h1>
-                <p class="mb-1">
+                <p class="mb-1 text-center">
                     <?php echo $lng['productos'][1]; ?>
                 </p>
                 <div class="liniacategoria"></div>
@@ -56,7 +56,6 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
                                 <?php echo $lng['productos'][3]; ?>
                             </h1>
                         </h5>
-                        <!-- <img class="img-categ" src="img/home/7.png"> -->
                     </div>
                     <div id="acordeon_eficaps" class="collapse" aria-labelledby="acor_head1" data-parent="#accordion">
                         <div class="card-body">

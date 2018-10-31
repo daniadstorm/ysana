@@ -22,8 +22,10 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
 </script>
 
 <body>
-    <?php include_once('../inc/franja_top.inc.php'); ?>
-    <?php include_once('../inc/main_menu.inc.php'); ?>
+    <?php //include_once('../inc/panel_top_experiencia.inc.php'); ?>
+    <?php //include_once('../inc/navbar_inicio_experiencia.inc.php'); ?>
+    <?php include_once('../inc/panel_top_experiencia.inc.php'); ?>
+    <?php include_once('../inc/navbar_inicio_experiencia.inc.php'); ?>
     <div class="bg-carrito">
         <div class="container">
             <div class="row">
@@ -112,7 +114,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                                 <div class="h5">Tele de prueba</div>
                                             </div>
                                         </td>
-                                        <td>169€</td>
+                                        <td>150€</td>
                                         <td>
                                             <span class="d-flex">
                                                 <button type="button" onclick="restQtt(2);" class="btn btn-unidades btn-mini btn-sm qtt-menos">--</button>
@@ -120,7 +122,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                                                 <button type="button" onclick="addQtt(2);" class="btn btn-unidades btn-mini btn-sm qtt-mas">+</button>
                                             </span>
                                         </td>
-                                        <td data-ref-total="2">169€</td>
+                                        <td data-ref-total="2">150€</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -145,7 +147,7 @@ include_once('../inc/cabecera.inc.php'); //cargando cabecera
                             </div>
                         </div>
                         <form action="">
-                            <button type="submit" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light"><?php echo $lng['experiencia-carrito'][8]; ?></button>
+                            <button type="submit" class="btn bg-naranja-ysana btn-lg btn-block mt-2 text-light"><?php echo $lng['experiencia-carrito'][8]; ?></button>
                         </form>
                     </div>
                     <!-- <div class="lista-top">
